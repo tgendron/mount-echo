@@ -25,13 +25,13 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#F8F5F0] dark:bg-[#0B0B0B]">
+    <section className="py-24 md:py-32 bg-[#F8F5F0] dark:bg-[#141414]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Label */}
         <p className="label-overline mb-16">{t("home.test.label")}</p>
 
         {/* Testimonials — horizontal rule separated */}
-        <div className="divide-y divide-[#0B0B0B]/8 dark:divide-white/8">
+        <div className="divide-y divide-[#0B0B0B]/10 dark:divide-white/10">
           {testimonials.map((item, i) => (
             <div
               key={item.author}

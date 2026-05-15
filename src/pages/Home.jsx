@@ -18,7 +18,7 @@ export default function Home() {
       <Testimonials />
 
       {/* Final CTA — stark, editorial */}
-      <section className="py-24 md:py-32 bg-[#F8F5F0] dark:bg-[#0B0B0B] border-t border-[#0B0B0B]/8 dark:border-white/8">
+      <section className="py-24 md:py-32 bg-[#F8F5F0] dark:bg-[#141414] border-t border-[#0B0B0B]/8 dark:border-white/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
             <h2 className="font-serif text-4xl md:text-6xl font-bold text-[#0B0B0B] dark:text-white leading-tight max-w-xl">

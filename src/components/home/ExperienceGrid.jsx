@@ -31,7 +31,7 @@ export default function ExperienceGrid() {
   const { t } = useLocale();
 
   return (
-    <section id="experiences" className="py-24 md:py-32 bg-[#F8F5F0] dark:bg-[#0B0B0B]">
+    <section id="experiences" className="py-24 md:py-32 bg-[#F8F5F0] dark:bg-[#141414]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section header */}
         <div className="flex items-end justify-between mb-14">

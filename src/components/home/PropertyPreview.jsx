@@ -13,14 +13,14 @@ export default function PropertyPreview() {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-[#0B0B0B] dark:bg-[#050505]">
+    <section className="py-24 md:py-32 bg-[#0D0D0D] dark:bg-[#080808]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           {/* Left — image placeholder with architectural frame */}
           <div className="relative">
             {/* Main frame */}
-            <div className="aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden bg-[#141414] border border-white/6 relative">
+            <div className="aspect-[4/3] md:aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden bg-[#141414] border border-white/6 relative">
               {/* Inner grid lines */}
               <div
                 className="absolute inset-0 opacity-[0.06]"
