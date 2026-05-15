@@ -1,0 +1,43 @@
+export const corporateTheme = {
+  slug: "corporate-offsites",
+  name: "Corporate Offsites",
+  tagline: "Where strategy meets stillness",
+  colors: {
+    primary: "#1a365d",
+    secondary: "#2b6cb0",
+    accent: "#ed8936",
+    background: "#f7fafc",
+    surface: "#ffffff",
+    text: "#1a202c",
+    textMuted: "#718096",
+    heroBg: "#1a365d",
+    heroText: "#ffffff",
+  },
+  copy: {
+    heroHeadline: "Realign Your Team,\nAway From the Noise",
+    heroSubheadline: "Week-long executive retreats designed for deep work, strategic alignment, and team renewal.",
+    introTitle: "Why Mount Echo for Your Offsite",
+    introBody: "Far enough from the office to think clearly. Close enough to nature to feel renewed. Mount Echo provides the structure and space for your team to do their best thinking together \u2014 without the distractions of daily operations. Every detail is handled so your team can focus on what matters.",
+    ctaText: "Plan Your Offsite",
+  },
+  highlights: [
+    { icon: "Users", title: "Team Alignment", description: "Dedicated workshop spaces and breakout rooms for strategic planning sessions." },
+    { icon: "Wifi", title: "Fast Connectivity", description: "Reliable high-speed internet for video calls, presentations, and collaborative work." },
+    { icon: "ChefHat", title: "Full Catering", description: "Chef-prepared meals so your team stays fueled without logistics overhead." },
+    { icon: "Mountain", title: "Nature Breaks", description: "Guided hikes and outdoor activities between work sessions to reset and recharge." },
+  ],
+  itinerary: [
+    { day: "Monday", title: "Arrival & Orientation", items: ["Afternoon check-in", "Property tour", "Welcome dinner & team icebreaker"] },
+    { day: "Tuesday", title: "Strategy Deep Dive", items: ["Morning workshop session", "Working lunch", "Afternoon hike to Ridgeline Overlook", "Evening fireside debrief"] },
+    { day: "Wednesday", title: "Collaborative Sprint", items: ["Breakout sessions", "Cross-team workshops", "Free afternoon for rest or exploration", "Group dinner"] },
+    { day: "Thursday", title: "Action Planning", items: ["Priority mapping", "Roadmap alignment", "Afternoon at Mirror Lake", "Celebration dinner"] },
+    { day: "Friday", title: "Wrap-Up & Departure", items: ["Morning reflection session", "Key takeaways & next steps", "Brunch and checkout by noon"] },
+  ],
+  featuredAmenities: ["high-speed-wifi", "meeting-room", "projector", "whiteboard", "chef-service", "hot-tub"],
+  pricing: {
+    headline: "Investment in Your Team",
+    startingAt: "$8,500",
+    unit: "per week \u00b7 full property",
+    includes: ["All 4 private bedrooms", "Dedicated meeting spaces", "Full catering (3 meals/day)", "Concierge service", "Activity planning & guides"],
+  },
+};

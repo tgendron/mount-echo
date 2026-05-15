@@ -1,0 +1,43 @@
+export const influencerTheme = {
+  slug: "influencer-filming",
+  name: "Influencer Filming",
+  tagline: "Your next chapter, beautifully framed",
+  colors: {
+    primary: "#1a1a2e",
+    secondary: "#c4a882",
+    accent: "#d4af37",
+    background: "#faf8f5",
+    surface: "#ffffff",
+    text: "#1a1a2e",
+    textMuted: "#6b6b7b",
+    heroBg: "#1a1a2e",
+    heroText: "#faf8f5",
+  },
+  copy: {
+    heroHeadline: "Create Without\nCompromise",
+    heroSubheadline: "A cinematic backdrop for content that stands apart. Styled interiors, golden-hour light, and zero distractions.",
+    introTitle: "Your Creative Studio in Nature",
+    introBody: "Mount Echo was designed with visual storytelling in mind. Every room, every angle, every moment of light has been considered. Bring your vision \u2014 we provide the canvas. From styled flat-lay surfaces to panoramic drone shots, the property delivers content opportunities at every turn.",
+    ctaText: "Book Your Shoot",
+  },
+  highlights: [
+    { icon: "Camera", title: "Endless Backdrops", description: "Styled interiors, rustic exteriors, forest trails, and mountain overlooks \u2014 all on property." },
+    { icon: "Sun", title: "Golden Hour Access", description: "East and west exposures for perfect morning and evening light without scouting." },
+    { icon: "Sparkles", title: "Styled Spaces", description: "Each room has a distinct aesthetic. Earthy minimalism to cozy maximalism \u2014 no set dressing needed." },
+    { icon: "Video", title: "Production Ready", description: "Power access points throughout, equipment storage, and flexible furniture for set configurations." },
+  ],
+  itinerary: [
+    { day: "Monday", title: "Arrival & Scout", items: ["Check-in and settle", "Property walkthrough for shot planning", "Golden hour test shots", "Mood board session"] },
+    { day: "Tuesday", title: "Interior Shoots", items: ["Morning light bedroom content", "Kitchen & lifestyle flat-lays", "Great Room sessions", "Review and plan adjustments"] },
+    { day: "Wednesday", title: "Exterior & Nature", items: ["Sunrise hike to Ridgeline Overlook", "Trail and forest content", "Mirror Lake shoot", "Evening deck content with fire pit"] },
+    { day: "Thursday", title: "Hero Content Day", items: ["Priority hero shots", "B-roll and transitions", "Collaborative or brand partner content", "Wrap party on the deck"] },
+    { day: "Friday", title: "Final Shots & Departure", items: ["Sunrise content", "Behind-the-scenes wrap-up", "Brunch and checkout"] },
+  ],
+  featuredAmenities: ["high-speed-wifi", "sound-system", "full-kitchen", "hot-tub", "hiking-trails", "yoga-deck"],
+  pricing: {
+    headline: "Your Production Package",
+    startingAt: "$7,500",
+    unit: "per week \u00b7 full property",
+    includes: ["All 4 private bedrooms", "Full property access for filming", "Meal planning & chef available", "Concierge for local permits", "Equipment storage & power access"],
+  },
+};

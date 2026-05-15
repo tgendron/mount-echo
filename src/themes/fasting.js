@@ -1,0 +1,43 @@
+export const fastingTheme = {
+  slug: "fasting-retreats",
+  name: "Fasting Retreats",
+  tagline: "Strip back. Tune in. Restore.",
+  colors: {
+    primary: "#4a5a3c",
+    secondary: "#7c8a6e",
+    accent: "#c67a4b",
+    background: "#f5f0e8",
+    surface: "#fdfbf7",
+    text: "#3d3d3d",
+    textMuted: "#7a7a6e",
+    heroBg: "#4a5a3c",
+    heroText: "#f5f0e8",
+  },
+  copy: {
+    heroHeadline: "Return to\nWhat's Essential",
+    heroSubheadline: "Guided fasting experiences in nature. A week to reset your body, quiet your mind, and reconnect with yourself.",
+    introTitle: "A Sanctuary for Reset",
+    introBody: "Mount Echo's fasting retreats are designed around simplicity and intention. With guided protocols, supportive community, and the healing presence of nature, this is a space to release what no longer serves you. Experienced facilitators, nourishing broths, and gentle movement create a container for deep transformation.",
+    ctaText: "Begin Your Reset",
+  },
+  highlights: [
+    { icon: "Leaf", title: "Guided Protocols", description: "Structured fasting programs adapted to your experience level, from intermittent to extended." },
+    { icon: "Heart", title: "Wellness Support", description: "Daily check-ins, electrolyte protocols, and on-call wellness practitioners throughout your stay." },
+    { icon: "TreePine", title: "Nature Immersion", description: "Forest bathing, sunrise meditation, and gentle trail walks to support your body\u2019s process." },
+    { icon: "Moon", title: "Rest & Recovery", description: "Designed for deep sleep. Blackout rooms, sound machines, and evening wind-down rituals." },
+  ],
+  itinerary: [
+    { day: "Monday", title: "Arrival & Preparation", items: ["Check-in and orientation", "Intention setting circle", "Last meal and evening meditation", "Sleep hygiene workshop"] },
+    { day: "Tuesday", title: "Day 1 of Fast", items: ["Morning meditation & breathwork", "Gentle yoga on the deck", "Journaling time", "Broth service & electrolytes", "Evening forest walk"] },
+    { day: "Wednesday", title: "Deepening", items: ["Sunrise observation", "Sound healing session", "Rest period", "Cold plunge at Mirror Lake (optional)", "Evening sharing circle"] },
+    { day: "Thursday", title: "Integration", items: ["Morning breathwork", "Creative expression workshop", "Nature sit-spot practice", "Broth service", "Gratitude ceremony"] },
+    { day: "Friday", title: "Breaking Fast & Departure", items: ["Gentle refeeding breakfast", "Closing circle", "Integration planning", "Departure by noon"] },
+  ],
+  featuredAmenities: ["yoga-deck", "sauna", "hot-tub", "hiking-trails", "sound-system", "full-kitchen"],
+  pricing: {
+    headline: "Your Healing Investment",
+    startingAt: "$6,500",
+    unit: "per week \u00b7 full property",
+    includes: ["All 4 private bedrooms", "Guided fasting protocols", "Wellness practitioner on-site", "Broths, teas & electrolytes", "Daily movement & meditation sessions"],
+  },
+};

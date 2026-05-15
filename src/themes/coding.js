@@ -1,0 +1,43 @@
+export const codingTheme = {
+  slug: "coding-bootcamps",
+  name: "Coding Bootcamps",
+  tagline: "Ship code. Build bonds. Level up.",
+  colors: {
+    primary: "#2d3748",
+    secondary: "#4299e1",
+    accent: "#68d391",
+    background: "#f0f4f8",
+    surface: "#ffffff",
+    text: "#1a202c",
+    textMuted: "#718096",
+    heroBg: "#2d3748",
+    heroText: "#f0f4f8",
+  },
+  copy: {
+    heroHeadline: "Code Better,\nTogether",
+    heroSubheadline: "Immersive week-long coding intensives. Fast internet, deep focus, and the kind of breakthroughs that only happen when you unplug from everything else.",
+    introTitle: "The Developer Retreat",
+    introBody: "Mount Echo is purpose-built for deep technical work. Reliable high-speed internet, standing desks, multiple monitors available, and spaces designed for both pair programming and solo flow states. Step outside for a trail run between sprints, then come back to ship the feature you\u2019ve been stuck on for weeks.",
+    ctaText: "Book Your Sprint",
+  },
+  highlights: [
+    { icon: "Code", title: "Dev-Ready Setup", description: "Gigabit internet, standing desks, external monitors, and power everywhere you look." },
+    { icon: "Zap", title: "Deep Focus", description: "No commute, no Slack noise, no context switching. Just you, your team, and the code." },
+    { icon: "GitBranch", title: "Pair Programming", description: "The Great Room and Studio are set up for collaborative coding, whiteboarding, and code reviews." },
+    { icon: "Coffee", title: "Fuel & Recovery", description: "Unlimited coffee, chef-prepared meals, and nature breaks to prevent burnout." },
+  ],
+  itinerary: [
+    { day: "Monday", title: "Setup & Kickoff", items: ["Check-in and workspace setup", "Sprint planning & goal setting", "First coding session", "Welcome dinner & lightning talks"] },
+    { day: "Tuesday", title: "Deep Work Day", items: ["Morning standup", "4-hour focus block", "Lunch & trail walk", "Afternoon pair programming", "Evening hack session (optional)"] },
+    { day: "Wednesday", title: "Midweek Review", items: ["Morning standup", "Code review & refactor session", "Afternoon hike to Mirror Lake", "Architecture discussions over dinner"] },
+    { day: "Thursday", title: "Ship It Day", items: ["Morning standup", "Final sprint push", "Demo prep", "Afternoon presentations & demos", "Celebration dinner & fire pit"] },
+    { day: "Friday", title: "Retro & Departure", items: ["Retrospective session", "Knowledge sharing", "Brunch and checkout by noon"] },
+  ],
+  featuredAmenities: ["high-speed-wifi", "meeting-room", "whiteboard", "chef-service", "hot-tub", "bikes"],
+  pricing: {
+    headline: "Your Sprint Investment",
+    startingAt: "$7,000",
+    unit: "per week \u00b7 full property",
+    includes: ["All 4 private bedrooms", "Dedicated workspace & AV", "Full catering (3 meals/day)", "High-speed dedicated internet", "Concierge & activity planning"],
+  },
+};
