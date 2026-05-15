@@ -187,6 +187,16 @@ export default {
   "notfound.body": "La page que vous cherchez n\u2019existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
   "notfound.btn": "Retour \u00e0 l\u2019accueil",
 
+  // Claude Camp
+  "exp.claude.name": "Claude Camp",
+  "exp.claude.tagline": "MVP à la traction en 5 jours.",
+  "exp.claude.heroHeadline": "De l'idée\nà la traction.",
+  "exp.claude.heroSub": "Un intensif fondateur d'une semaine propulsé par l'IA. Construisez votre produit, affinez votre GTM et lancez — avec Claude comme co-pilote.",
+  "exp.claude.introTitle": "Qu'est-ce que Claude Camp?",
+  "exp.claude.introBody": "Claude Camp est un intensif de 5 jours pour les fondateurs et les builders prêts à aller vite. Arrivez avec votre MVP, vos questions et votre ambition. Repartez avec de la traction, une stratégie GTM affinée et les workflows IA qui définiront votre façon de builder.",
+  "exp.claude.cta": "Candidater à Claude Camp",
+  "exp.claude.pricing.headline": "Votre investissement traction",
+
   // Footer
   "footer.desc": "Un domaine d\u2019hospitalit\u00e9 pour des exp\u00e9riences transformatrices d\u2019une semaine. Retraites d\u2019entreprise, r\u00e9sidences cr\u00e9atives, parcours bien-\u00eatre et plus encore.",
   "footer.experiences": "Exp\u00e9riences",

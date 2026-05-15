@@ -187,6 +187,16 @@ export default {
   "notfound.body": "The page you\u2019re looking for doesn\u2019t exist or has been moved.",
   "notfound.btn": "Return Home",
 
+  // Claude Camp
+  "exp.claude.name": "Claude Camp",
+  "exp.claude.tagline": "MVP to traction in 5 days.",
+  "exp.claude.heroHeadline": "From Idea\nto Traction.",
+  "exp.claude.heroSub": "A week-long AI-powered founder intensive at Mount Echo. Build your product, sharpen your GTM, and ship — with Claude as your co-pilot.",
+  "exp.claude.introTitle": "What is Claude Camp?",
+  "exp.claude.introBody": "Claude Camp is a 5-day intensive for founders and builders who are ready to move fast. Bring your MVP, your questions, and your ambition. Leave with traction, a sharpened GTM strategy, and the AI workflows that will define how you build from here.",
+  "exp.claude.cta": "Apply for Claude Camp",
+  "exp.claude.pricing.headline": "Your Traction Investment",
+
   // Footer
   "footer.desc": "A curated hospitality property for transformative week-long experiences. Corporate retreats, creative residencies, wellness journeys, and more.",
   "footer.experiences": "Experiences",

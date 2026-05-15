@@ -3,11 +3,13 @@
 @custom-variant dark (&:where(.dark *));
 
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
 }
 
 @layer components {
+  /* Theme color utilities */
   .theme-primary { color: var(--color-primary); }
   .theme-secondary { color: var(--color-secondary); }
   .theme-accent { color: var(--color-accent); }
@@ -22,33 +24,63 @@
   .theme-border-primary { border-color: var(--color-primary); }
   .theme-border-accent { border-color: var(--color-accent); }
 
+  /* Buttons — pill-shaped, high-contrast */
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 cursor-pointer;
+    @apply inline-flex items-center justify-center px-7 py-3 rounded-full font-medium transition-all duration-200 cursor-pointer text-sm tracking-wide;
   }
+
+  /* Primary: black on white */
   .btn-primary {
-    background-color: var(--color-primary, #1a365d);
+    @apply bg-[#0B0B0B] text-white hover:bg-[#2a2a2a] dark:bg-white dark:text-[#0B0B0B] dark:hover:bg-gray-100;
+  }
+
+  /* Theme primary: uses CSS var */
+  .btn-theme-primary {
+    background-color: var(--color-primary, #0B0B0B);
     color: white;
   }
-  .btn-primary:hover {
-    filter: brightness(1.1);
-    transform: translateY(-1px);
+  .btn-theme-primary:hover {
+    filter: brightness(1.15);
   }
+
+  /* Accent: uses CSS var */
   .btn-accent {
-    background-color: var(--color-accent, #ed8936);
+    background-color: var(--color-accent, #C4965A);
     color: white;
   }
   .btn-accent:hover {
     filter: brightness(1.1);
-    transform: translateY(-1px);
   }
+
+  /* Ghost: transparent with border */
+  .btn-ghost {
+    @apply border border-[#0B0B0B]/20 text-[#0B0B0B] bg-transparent hover:bg-[#0B0B0B] hover:text-white dark:border-white/20 dark:text-white dark:hover:bg-white dark:hover:text-[#0B0B0B];
+  }
+
+  /* Ghost light: for dark backgrounds */
+  .btn-ghost-light {
+    @apply border border-white/25 text-white/80 bg-transparent hover:bg-white/10 hover:text-white;
+  }
+
+  /* Outline using theme color */
   .btn-outline {
-    @apply border-2 bg-transparent;
-    border-color: var(--color-primary, #1a365d);
-    color: var(--color-primary, #1a365d);
+    @apply border bg-transparent rounded-full;
+    border-color: var(--color-primary, #0B0B0B);
+    color: var(--color-primary, #0B0B0B);
   }
   .btn-outline:hover {
-    background-color: var(--color-primary, #1a365d);
+    background-color: var(--color-primary, #0B0B0B);
     color: white;
+  }
+
+  /* Label / overline style */
+  .label-overline {
+    @apply text-[10px] uppercase tracking-[0.35em] font-medium text-[#0B0B0B]/40 dark:text-white/40;
+  }
+
+  /* Mono accent (for prices, stats, etc) */
+  .font-mono-accent {
+    font-family: var(--font-mono);
   }
 }
 
@@ -59,24 +91,41 @@
   body {
     margin: 0;
     font-family: var(--font-sans);
-    color: #1a202c;
+    color: #0B0B0B;
+    background-color: #F8F5F0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   .dark body {
-    color: #e2e8f0;
-    background-color: #0f172a;
+    color: #F0EDE6;
+    background-color: #0B0B0B;
   }
 }
 
 @layer utilities {
   .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
   }
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Section dividers */
+  .section-light {
+    @apply bg-[#F8F5F0] dark:bg-[#111111];
+  }
+  .section-white {
+    @apply bg-white dark:bg-[#0F0F0F];
+  }
+  .section-dark {
+    @apply bg-[#0B0B0B] dark:bg-[#050505];
+  }
+
+  /* Architectural grid line */
+  .grid-line {
+    @apply border-[#0B0B0B]/8 dark:border-white/8;
   }
 }

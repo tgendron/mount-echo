@@ -1,44 +1,69 @@
 import { Link } from "react-router-dom";
-import { ArrowDown } from "lucide-react";
 import { useLocale } from "../../contexts/LocaleContext";
 
 export default function HeroSection() {
   const { t } = useLocale();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
-      {/* Background image placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cpath%20d%3D%22M0%20100%20L50%200%20L100%20100%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%220.5%22%2F%3E%3C%2Fsvg%3E')] bg-repeat bg-[length:200px_200px]" />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-gray-900/40" />
+    <section className="relative min-h-screen flex flex-col justify-end bg-[#0B0B0B] overflow-hidden">
+      {/* Subtle topographic / architectural grid */}
+      <div
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
+        }}
+      />
 
-      <div className="relative text-center px-4 max-w-4xl mx-auto">
-        <p className="text-sm uppercase tracking-[0.3em] text-white/60 mb-6 font-medium">
-          {t("home.hero.label")}
+      {/* Diagonal accent line */}
+      <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent translate-x-0" style={{ right: "15%" }} />
+
+      {/* Corner coordinate — techy detail */}
+      <div className="absolute top-28 right-8 text-[10px] font-mono text-white/20 tracking-wider hidden lg:block">
+        47.6062° N&nbsp;&nbsp;122.3321° W
+      </div>
+
+      {/* Bottom content — left-anchored editorial layout */}
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full pb-16 pt-32">
+        {/* Overline */}
+        <p className="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-10 font-medium">
+          Pacific Northwest&nbsp;&nbsp;·&nbsp;&nbsp;Est. 2024
         </p>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-[1.05]">
-          {t("home.hero.title")}
+
+        {/* Headline — massive editorial serif */}
+        <h1 className="font-serif text-[clamp(4rem,13vw,11rem)] font-bold text-white leading-[0.88] mb-12 tracking-tight">
+          Mount<br />Echo
         </h1>
-        <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-          {t("home.hero.subtitle")}
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link to="/book" className="btn btn-accent text-base px-8 py-4">
-            {t("home.hero.cta")}
-          </Link>
-          <Link to="#experiences" className="btn btn-outline !border-white/30 !text-white hover:!bg-white/10 text-base px-8 py-4">
-            {t("home.hero.explore")}
-          </Link>
+
+        {/* Bottom bar — description + CTA */}
+        <div className="flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-20 border-t border-white/10 pt-8">
+          <p className="text-white/50 text-[15px] max-w-sm leading-relaxed font-light">
+            {t("home.hero.subtitle")}
+          </p>
+          <div className="flex items-center gap-4 shrink-0">
+            <Link to="/book" className="btn btn-ghost-light text-[13px] !py-2.5 !px-7">
+              {t("home.hero.cta")}
+            </Link>
+            <a
+              href="#experiences"
+              className="text-[13px] text-white/40 hover:text-white/70 transition-colors tracking-wide"
+            >
+              {t("home.hero.explore")} ↓
+            </a>
+          </div>
         </div>
       </div>
 
-      <a
-        href="#experiences"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-white/70 transition-colors animate-bounce"
-      >
-        <ArrowDown size={24} />
-      </a>
+      {/* Scroll indicator — right side, rotated */}
+      <div className="absolute bottom-16 right-8 hidden lg:flex items-center gap-3">
+        <span className="text-[9px] uppercase tracking-[0.4em] text-white/20 [writing-mode:vertical-lr]">
+          Scroll
+        </span>
+        <div className="w-px h-12 bg-gradient-to-b from-white/20 to-transparent" />
+      </div>
     </section>
   );
 }

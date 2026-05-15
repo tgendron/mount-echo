@@ -17,18 +17,22 @@ export default function Home() {
       <PropertyPreview />
       <Testimonials />
 
-      {/* Final CTA */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-            {t("home.cta.title")}
-          </h2>
-          <p className="text-lg text-gray-400 mb-8">
-            {t("home.cta.subtitle")}
-          </p>
-          <Link to="/book" className="btn btn-accent text-base px-10 py-4">
-            {t("home.cta.btn")}
-          </Link>
+      {/* Final CTA — stark, editorial */}
+      <section className="py-24 md:py-32 bg-[#F8F5F0] dark:bg-[#0B0B0B] border-t border-[#0B0B0B]/8 dark:border-white/8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
+            <h2 className="font-serif text-4xl md:text-6xl font-bold text-[#0B0B0B] dark:text-white leading-tight max-w-xl">
+              {t("home.cta.title")}
+            </h2>
+            <div className="shrink-0">
+              <p className="text-[13px] text-[#0B0B0B]/50 dark:text-white/40 mb-6 max-w-xs leading-relaxed">
+                {t("home.cta.subtitle")}
+              </p>
+              <Link to="/book" className="btn btn-primary text-[13px] !py-3 !px-8">
+                {t("home.cta.btn")}
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>

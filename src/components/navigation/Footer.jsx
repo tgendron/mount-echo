@@ -1,66 +1,89 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone } from "lucide-react";
 import { useLocale } from "../../contexts/LocaleContext";
 
 export default function Footer() {
   const { t } = useLocale();
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-[#0B0B0B] border-t border-white/6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-10">
+        {/* Top row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
           {/* Brand */}
-          <div>
-            <h3 className="font-serif text-2xl font-bold mb-4">Mount Echo</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
+          <div className="col-span-2 md:col-span-1">
+            <Link to="/" className="font-serif text-lg font-bold text-white inline-block mb-4">
+              Mount Echo
+            </Link>
+            <p className="text-[13px] text-white/35 leading-relaxed max-w-[200px]">
               {t("footer.desc")}
             </p>
           </div>
 
           {/* Experiences */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">{t("footer.experiences")}</h4>
-            <ul className="space-y-2">
-              <li><Link to="/experience/corporate-offsites" className="text-sm text-gray-300 hover:text-white transition-colors">{t("exp.corporate.name")}</Link></li>
-              <li><Link to="/experience/influencer-filming" className="text-sm text-gray-300 hover:text-white transition-colors">{t("exp.influencer.name")}</Link></li>
-              <li><Link to="/experience/fasting-retreats" className="text-sm text-gray-300 hover:text-white transition-colors">{t("exp.fasting.name")}</Link></li>
-              <li><Link to="/experience/coding-bootcamps" className="text-sm text-gray-300 hover:text-white transition-colors">{t("exp.coding.name")}</Link></li>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/25 mb-5 font-medium">{t("footer.experiences")}</p>
+            <ul className="space-y-3">
+              {[
+                ["corporate-offsites", t("exp.corporate.name")],
+                ["influencer-filming", t("exp.influencer.name")],
+                ["fasting-retreats",   t("exp.fasting.name")],
+                ["coding-bootcamps",   t("exp.coding.name")],
+                ["claude-camp",        t("exp.claude.name")],
+              ].map(([slug, label]) => (
+                <li key={slug}>
+                  <Link
+                    to={`/experience/${slug}`}
+                    className="text-[13px] text-white/40 hover:text-white transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">{t("footer.quickLinks")}</h4>
-            <ul className="space-y-2">
-              <li><Link to="/property" className="text-sm text-gray-300 hover:text-white transition-colors">{t("nav.property")}</Link></li>
-              <li><Link to="/journal" className="text-sm text-gray-300 hover:text-white transition-colors">{t("nav.journal")}</Link></li>
-              <li><Link to="/about" className="text-sm text-gray-300 hover:text-white transition-colors">{t("nav.about")}</Link></li>
-              <li><Link to="/book" className="text-sm text-gray-300 hover:text-white transition-colors">{t("nav.book")}</Link></li>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/25 mb-5 font-medium">{t("footer.quickLinks")}</p>
+            <ul className="space-y-3">
+              {[
+                ["/property", t("nav.property")],
+                ["/journal",  t("nav.journal")],
+                ["/about",    t("nav.about")],
+                ["/book",     t("nav.book")],
+              ].map(([path, label]) => (
+                <li key={path}>
+                  <Link to={path} className="text-[13px] text-white/40 hover:text-white transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">{t("footer.contact")}</h4>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/25 mb-5 font-medium">{t("footer.contact")}</p>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-sm text-gray-300">
-                <Mail size={16} className="text-gray-500" />
-                hello@mountecho.com
+              <li>
+                <a href="mailto:hello@mountecho.com" className="text-[13px] text-white/40 hover:text-white transition-colors">
+                  hello@mountecho.com
+                </a>
               </li>
-              <li className="flex items-center gap-2 text-sm text-gray-300">
-                <Phone size={16} className="text-gray-500" />
-                (555) 123-4567
-              </li>
-              <li className="flex items-start gap-2 text-sm text-gray-300">
-                <MapPin size={16} className="text-gray-500 mt-0.5" />
-                Pacific Northwest
-              </li>
+              <li className="text-[13px] text-white/40">Pacific Northwest</li>
+              <li className="font-mono text-[11px] text-white/20 tracking-wider mt-4">47.6062° N</li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} Mount Echo. {t("footer.rights")}
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3 pt-8 border-t border-white/6">
+          <p className="font-mono text-[11px] text-white/20 tracking-wider">
+            © {new Date().getFullYear()} MOUNT ECHO
+          </p>
+          <p className="text-[11px] text-white/15">
+            {t("footer.rights")}
+          </p>
         </div>
       </div>
     </footer>
