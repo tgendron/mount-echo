@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function Footer() {
   const { t } = useLocale();
@@ -70,18 +70,18 @@ export default function Footer() {
                   hello@mountecho.com
                 </a>
               </li>
-              <li className="text-[13px] text-white/40">Pacific Northwest</li>
-              <li className="font-mono text-[11px] text-white/20 tracking-wider mt-4">47.6062° N</li>
+              <li className="text-[13px] text-white/40">{t("footer.location")}</li>
+              <li aria-hidden="true" className="font-mono text-[11px] text-white/20 tracking-wider mt-4">47.6062° N</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 pt-8 border-t border-white/6">
-          <p className="font-mono text-[11px] text-white/20 tracking-wider">
+          <p className="font-mono text-[11px] text-white/35 tracking-wider">
             © {new Date().getFullYear()} MOUNT ECHO
           </p>
-          <p className="text-[11px] text-white/15">
+          <p className="text-[11px] text-white/35">
             {t("footer.rights")}
           </p>
         </div>

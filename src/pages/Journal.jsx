@@ -4,10 +4,10 @@ import { ArrowRight } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
 import { posts } from "../config/journal";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 export default function Journal() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (
@@ -43,7 +43,7 @@ export default function Journal() {
                     {post.category}
                   </span>
                   <span className="text-xs text-gray-400 dark:text-gray-500">
-                    {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+                    {new Date(post.date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", { month: "long", day: "numeric", year: "numeric" })}
                   </span>
                 </div>
                 <h2 className="font-serif text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">

@@ -217,4 +217,15 @@ export default {
   "testimonial.3.author": "Dr. Amara Osei",
   "testimonial.3.role": "Praticienne bien-\u00eatre",
   "testimonial.3.exp": "Retraite de je\u00fbne",
+
+  // Misc UI strings
+  "home.hero.overline": "Nord-Ouest Pacifique \u00b7 Depuis 2024",
+  "home.hero.scroll": "D\u00e9filer",
+  "home.prop.photosSoon": "Photographies \u00e0 venir",
+  "home.prop.elevLabel": "Altitude",
+  "home.prop.elevValue": "730 m",
+  "property.bed.king": "Lit king",
+  "property.bed.queen": "Lit queen",
+  "journal.by": "Par",
+  "footer.location": "Nord-Ouest Pacifique",
 };

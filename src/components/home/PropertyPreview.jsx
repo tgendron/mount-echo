@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function PropertyPreview() {
   const { t } = useLocale();
@@ -34,7 +34,7 @@ export default function PropertyPreview() {
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <p className="font-mono text-[10px] text-white/15 tracking-[0.3em] uppercase">
-                  Photography arriving soon
+                  {t("home.prop.photosSoon")}
                 </p>
               </div>
               {/* Corner marks */}
@@ -46,8 +46,8 @@ export default function PropertyPreview() {
 
             {/* Floating stat card */}
             <div className="absolute -bottom-5 -right-4 md:-right-6 bg-[#F8F5F0] dark:bg-[#141414] rounded-xl px-5 py-4 border border-[#0B0B0B]/6 dark:border-white/8 hidden md:block">
-              <p className="font-mono text-[10px] text-[#0B0B0B]/40 dark:text-white/30 tracking-[0.2em] uppercase mb-0.5">Elevation</p>
-              <p className="font-serif text-2xl font-bold text-[#0B0B0B] dark:text-white">2,400 ft</p>
+              <p className="font-mono text-[10px] text-[#0B0B0B]/40 dark:text-white/30 tracking-[0.2em] uppercase mb-0.5">{t("home.prop.elevLabel")}</p>
+              <p className="font-serif text-2xl font-bold text-[#0B0B0B] dark:text-white">{t("home.prop.elevValue")}</p>
             </div>
           </div>
 

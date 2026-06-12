@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function ExperienceItinerary({ theme }) {
   const { t } = useLocale();
@@ -28,6 +28,7 @@ export default function ExperienceItinerary({ theme }) {
             >
               <button
                 onClick={() => setOpenDay(openDay === i ? -1 : i)}
+                aria-expanded={openDay === i}
                 className="w-full flex items-center justify-between px-6 py-4 text-left"
                 style={{ backgroundColor: openDay === i ? `${theme.colors.primary}08` : "transparent" }}
               >

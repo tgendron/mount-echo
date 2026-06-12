@@ -217,4 +217,15 @@ export default {
   "testimonial.3.author": "Dr. Amara Osei",
   "testimonial.3.role": "Wellness Practitioner",
   "testimonial.3.exp": "Fasting Retreat",
+
+  // Misc UI strings
+  "home.hero.overline": "Pacific Northwest · Est. 2024",
+  "home.hero.scroll": "Scroll",
+  "home.prop.photosSoon": "Photography arriving soon",
+  "home.prop.elevLabel": "Elevation",
+  "home.prop.elevValue": "2,400 ft",
+  "property.bed.king": "King Bed",
+  "property.bed.queen": "Queen Bed",
+  "journal.by": "By",
+  "footer.location": "Pacific Northwest",
 };

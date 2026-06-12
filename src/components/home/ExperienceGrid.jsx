@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { experienceList } from "../../config/experiences";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 const cardColors = {
   "corporate-offsites":  "from-[#0D1B2A] via-[#1a2f4a] to-[#0D1B2A]",
@@ -92,7 +92,7 @@ export default function ExperienceGrid() {
                     }`}>
                       {t(`exp.${key}.name`)}
                     </h3>
-                    <div className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/40 group-hover:text-white group-hover:border-white/40 group-hover:bg-white/10 transition-all duration-200 shrink-0 ml-4">
+                    <div className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white/70 group-hover:text-white group-hover:border-white/60 group-hover:bg-white/10 transition-all duration-200 shrink-0 ml-4">
                       <ArrowUpRight size={16} />
                     </div>
                   </div>

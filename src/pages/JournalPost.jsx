@@ -4,10 +4,10 @@ import { ArrowLeft } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
 import { posts } from "../config/journal";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 export default function JournalPost() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const { slug } = useParams();
   const post = posts.find((p) => p.slug === slug);
 
@@ -33,13 +33,13 @@ export default function JournalPost() {
               {post.category}
             </span>
             <span className="text-xs text-gray-500">
-              {new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}
+              {new Date(post.date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", { month: "long", day: "numeric", year: "numeric" })}
             </span>
           </div>
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-white leading-tight">
             {post.title}
           </h1>
-          <p className="text-sm text-gray-400 mt-4">By {post.author}</p>
+          <p className="text-sm text-gray-400 mt-4">{t("journal.by")} {post.author}</p>
         </Container>
       </section>
 

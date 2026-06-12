@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function HeroSection() {
   const { t } = useLocale();
@@ -25,7 +25,7 @@ export default function HeroSection() {
       />
 
       {/* Coordinate detail */}
-      <div className="absolute top-28 right-8 text-[10px] font-mono text-white/20 tracking-wider hidden lg:block">
+      <div aria-hidden="true" className="absolute top-28 right-8 text-[10px] font-mono text-white/20 tracking-wider hidden lg:block">
         47.6062° N&nbsp;&nbsp;122.3321° W
       </div>
 
@@ -33,7 +33,7 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 w-full pb-14 lg:pb-20 pt-36 lg:pt-40">
         {/* Overline */}
         <p className="text-[10px] uppercase tracking-[0.4em] text-white/30 mb-8 lg:mb-10 font-medium">
-          Pacific Northwest&nbsp;&nbsp;·&nbsp;&nbsp;Est. 2024
+          {t("home.hero.overline")}
         </p>
 
         {/* Headline */}
@@ -62,9 +62,9 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-14 right-8 hidden lg:flex flex-col items-center gap-3">
+      <div aria-hidden="true" className="absolute bottom-14 right-8 hidden lg:flex flex-col items-center gap-3">
         <span className="text-[9px] uppercase tracking-[0.4em] text-white/20 [writing-mode:vertical-lr]">
-          Scroll
+          {t("home.hero.scroll")}
         </span>
         <div className="w-px h-10 bg-gradient-to-b from-white/20 to-transparent" />
       </div>

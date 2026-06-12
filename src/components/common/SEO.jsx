@@ -4,6 +4,7 @@ const defaults = {
   siteName: "Mount Echo",
   siteUrl: "https://mountecho.com",
   description: "Curated week-long experiences in nature. Corporate retreats, creative residencies, wellness journeys, and coding intensives.",
+  image: "https://mountecho.com/og.png",
 };
 
 export default function SEO({ title, description, path = "", ogType = "website" }) {
@@ -21,9 +22,11 @@ export default function SEO({ title, description, path = "", ogType = "website" 
       <meta property="og:url" content={url} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={defaults.siteName} />
+      <meta property="og:image" content={defaults.image} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={desc} />
+      <meta name="twitter:image" content={defaults.image} />
     </Helmet>
   );
 }

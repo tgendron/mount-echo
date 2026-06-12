@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Camera, BarChart3, Rocket, Database, Calendar, Mail, CreditCard, Globe, Image, Shield } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 const backlogItems = [
   {
@@ -33,9 +33,17 @@ const backlogItems = [
     priority: "high",
     category: "Analytics",
     title: "Analytics & Event Tracking",
-    description: "Add Plausible or PostHog for privacy-friendly analytics. Track: page views per experience, booking form submissions, scroll depth on experience pages, CTA click-through rates.",
+    description: "Add Plausible or PostHog for privacy-friendly analytics. Track: page views per experience, booking form submissions, scroll depth on experience pages, CTA click-through rates. Needs an account — also unlocks the French traffic data that gates content translation.",
     icon: BarChart3,
     effort: "2-3 hours",
+  },
+  {
+    priority: "high",
+    category: "Infrastructure",
+    title: "Set VITE_ADMIN_PASSWORD for Preview Deployments",
+    description: "The admin gate password is set for Production via the Vercel CLI, but the CLI could not target the Preview environment non-interactively. Add the same variable for Preview in the Vercel dashboard (Settings → Environment Variables) so branch deploys can access /admin. Until then, preview deploys safely deny all admin access.",
+    icon: Shield,
+    effort: "2 minutes — Vercel dashboard",
   },
   {
     priority: "medium",
@@ -68,6 +76,14 @@ const backlogItems = [
     description: "Replace the sessionStorage password gate with proper auth. Options: Supabase Auth (email + password), Clerk, or NextAuth. Add role-based access if needed for concierge staff vs. owners.",
     icon: Shield,
     effort: "1-2 days dev work",
+  },
+  {
+    priority: "medium",
+    category: "Content",
+    title: "French Content Translation",
+    description: "UI chrome is fully bilingual, but config-driven content is English-only: room names and descriptions, experience itineraries/highlights, journal posts, and per-page SEO meta descriptions. Hold until analytics confirms meaningful French traffic, then translate configs and localize the SEO component.",
+    icon: Globe,
+    effort: "1-2 days + translation",
   },
   {
     priority: "low",
@@ -105,7 +121,7 @@ export default function Backlog() {
 
   return (
     <>
-      <SEO title="Product Backlog" description="Mount Echo development roadmap and feature backlog." path="/backlog" />
+      <SEO title="Product Backlog" description="Mount Echo development roadmap and feature backlog." path="/admin/backlog" />
 
       <section className="bg-gray-900 py-24 md:py-32">
         <Container className="text-center">
@@ -141,6 +157,12 @@ export default function Backlog() {
               "Journal / blog with 3 seed posts",
               "Responsive design (mobile / tablet / desktop)",
               "About page with values",
+              "Env-gated admin password (VITE_ADMIN_PASSWORD)",
+              "Vercel SPA rewrites + robots.txt + sitemap.xml",
+              "OG share image + LodgingBusiness JSON-LD",
+              "Code-split bundle (984 kB → 354 kB)",
+              "Bilingual UI incl. localized dates (EN/FR)",
+              "Backlog moved behind the admin gate",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-green-800 dark:text-green-300 bg-white dark:bg-gray-900 rounded-lg px-3 py-2 border border-green-100 dark:border-green-900">
                 <span className="w-4 h-4 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center shrink-0">
