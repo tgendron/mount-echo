@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Mail, Phone, Calendar, Users, CheckCircle } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 // Replace with your Formspree form ID after creating one at https://formspree.io
 const FORMSPREE_ID = "xpwzgkby";

@@ -1,4 +1,4 @@
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function Testimonials() {
   const { t } = useLocale();
@@ -32,7 +32,7 @@ export default function Testimonials() {
 
         {/* Testimonials — horizontal rule separated */}
         <div className="divide-y divide-[#0B0B0B]/10 dark:divide-white/10">
-          {testimonials.map((item, i) => (
+          {testimonials.map((item) => (
             <div
               key={item.author}
               className="py-10 md:py-12 grid md:grid-cols-[1fr_auto] gap-6 md:gap-16 items-start"

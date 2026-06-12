@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Container from "../components/common/Container";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 export default function NotFound() {
   const { t } = useLocale();

@@ -4,7 +4,7 @@ import PropertyPreview from "../components/home/PropertyPreview";
 import Testimonials from "../components/home/Testimonials";
 import { Link } from "react-router-dom";
 import SEO from "../components/common/SEO";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 export default function Home() {
   const { t } = useLocale();

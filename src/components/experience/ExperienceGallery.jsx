@@ -1,5 +1,5 @@
 import { Camera } from "lucide-react";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function ExperienceGallery({ theme }) {
   const { t } = useLocale();

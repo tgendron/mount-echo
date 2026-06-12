@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { property } from "../config/property";
-import * as Icons from "lucide-react";
+import { Bed, MapPin } from "lucide-react";
+import { iconMap } from "../config/icons";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 export default function Property() {
   const { t } = useLocale();
@@ -42,12 +43,12 @@ export default function Property() {
                 <div key={room.id} className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
                   {/* Image placeholder */}
                   <div className="aspect-[16/10] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center">
-                    <Icons.Bed size={40} className="text-gray-300 dark:text-gray-500" />
+                    <Bed size={40} className="text-gray-300 dark:text-gray-500" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-serif text-xl font-bold text-gray-900 dark:text-white">{room.name}</h3>
-                      <span className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-3 py-1 rounded-full">{room.beds} Bed</span>
+                      <span className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-3 py-1 rounded-full">{t(`property.bed.${room.beds.toLowerCase()}`)}</span>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">{room.description}</p>
                     <div className="flex flex-wrap gap-2">
@@ -88,7 +89,7 @@ export default function Property() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {property.amenities.map((a) => {
-              const Icon = Icons[a.icon] || Icons.Star;
+              const Icon = iconMap[a.icon] || iconMap.Star;
               return (
                 <div key={a.id} className="flex items-center gap-3 bg-white dark:bg-gray-900 rounded-xl p-4">
                   <Icon size={20} className="text-gray-500 dark:text-gray-400 shrink-0" />
@@ -109,7 +110,7 @@ export default function Property() {
           <div className="grid md:grid-cols-2 gap-6">
             {property.nearbyNature.map((spot) => (
               <div key={spot.name} className="flex gap-4 p-5 rounded-xl bg-gray-50 dark:bg-gray-800">
-                <Icons.MapPin size={20} className="text-green-600 shrink-0 mt-0.5" />
+                <MapPin size={20} className="text-green-600 shrink-0 mt-0.5" />
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <h3 className="font-semibold text-gray-900 dark:text-white">{spot.name}</h3>

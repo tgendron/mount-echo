@@ -1,6 +1,6 @@
-import * as Icons from "lucide-react";
+import { iconMap } from "../../config/icons";
 import { property } from "../../config/property";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function ExperienceAmenities({ theme }) {
   const { t } = useLocale();
@@ -19,7 +19,7 @@ export default function ExperienceAmenities({ theme }) {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
           {amenities.map((a) => {
-            const Icon = Icons[a.icon] || Icons.Star;
+            const Icon = iconMap[a.icon] || iconMap.Star;
             return (
               <div key={a.id} className="flex items-center gap-3">
                 <div

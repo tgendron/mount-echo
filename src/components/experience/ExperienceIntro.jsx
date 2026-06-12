@@ -1,4 +1,4 @@
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function ExperienceIntro({ theme }) {
   const { t } = useLocale();

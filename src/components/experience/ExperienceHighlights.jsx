@@ -1,4 +1,4 @@
-import * as Icons from "lucide-react";
+import { iconMap } from "../../config/icons";
 
 export default function ExperienceHighlights({ theme }) {
   return (
@@ -6,7 +6,7 @@ export default function ExperienceHighlights({ theme }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {theme.highlights.map((h) => {
-            const Icon = Icons[h.icon] || Icons.Star;
+            const Icon = iconMap[h.icon] || iconMap.Star;
             return (
               <div key={h.title} className="text-center">
                 <div

@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function ExperiencePricing({ theme }) {
   const { t } = useLocale();

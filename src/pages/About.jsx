@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Heart, Leaf, Compass, Handshake } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
-import { useLocale } from "../contexts/LocaleContext";
+import { useLocale } from "../hooks/useLocale";
 
 const valueIcons = [Heart, Leaf, Compass, Handshake];
 const valueKeys = ["hospitality", "nature", "flexible", "concierge"];

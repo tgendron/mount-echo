@@ -2,8 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react";
 import { navLinks } from "../../config/navigation";
-import { useTheme } from "../../contexts/ThemeContext";
-import { useLocale } from "../../contexts/LocaleContext";
+import { useTheme } from "../../hooks/useTheme";
+import { useLocale } from "../../hooks/useLocale";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -20,10 +20,14 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
+  // Close menus when navigation changes — adjust state during render instead
+  // of in an effect so the closed menu paints in the same pass as the new page
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
     setDropdownOpen(false);
     setMobileOpen(false);
-  }, [location.pathname]);
+  }
 
   const openDropdown = () => {
     clearTimeout(timeoutRef.current);
