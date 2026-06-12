@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Outlet, Link, useLocation, Navigate } from "react-router-dom";
-import { LayoutDashboard, Calendar, MessageSquare, ConciergeBell, LogOut, Menu, X } from "lucide-react";
+import { LayoutDashboard, Calendar, MessageSquare, ConciergeBell, ListTodo, LogOut, Menu, X } from "lucide-react";
 
 const adminLinks = [
   { label: "Dashboard", path: "/admin", icon: LayoutDashboard },
   { label: "Availability", path: "/admin/availability", icon: Calendar },
   { label: "Inquiries", path: "/admin/inquiries", icon: MessageSquare },
   { label: "Concierge", path: "/admin/concierge", icon: ConciergeBell },
+  { label: "Backlog", path: "/admin/backlog", icon: ListTodo },
 ];
 
 function AdminAuth({ onAuth }) {
@@ -15,8 +16,10 @@ function AdminAuth({ onAuth }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // MVP: simple password gate — replace with real auth
-    if (password === "mountecho2026") {
+    // MVP: simple password gate — the password lives in VITE_ADMIN_PASSWORD
+    // (still visible in the bundle; real auth is on the backlog). With the
+    // env var unset, the gate denies everyone rather than falling open.
+    if (import.meta.env.VITE_ADMIN_PASSWORD && password === import.meta.env.VITE_ADMIN_PASSWORD) {
       sessionStorage.setItem("admin_auth", "true");
       onAuth();
     } else {
