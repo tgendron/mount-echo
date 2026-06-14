@@ -25,9 +25,17 @@ const backlogItems = [
     priority: "high",
     category: "Infrastructure",
     title: "Deploy to Production",
-    description: "Push to GitHub repo, deploy via Vercel or Netlify. Configure custom domain (mountecho.com), SSL, SPA routing redirects, and preview deployments for branches.",
+    description: "Shipped: deployed to Vercel (mount-echo.vercel.app) with SPA rewrites and SSL. Remaining: connect a custom domain and configure preview-branch deployments.",
     icon: Rocket,
     effort: "1-2 hours",
+  },
+  {
+    priority: "high",
+    category: "Infrastructure",
+    title: "Resolve Canonical Domain Mismatch",
+    description: "SEO tags, canonical URLs, sitemap.xml, and robots.txt all reference https://mountecho.com, but that domain is NOT configured — the live site is mount-echo.vercel.app. Social share cards are broken because scrapers fetch mountecho.com/og.png (the image is deployed, just at the wrong host). Either register/connect mountecho.com in Vercel, or update siteUrl in src/components/common/SEO.jsx, public/sitemap.xml, public/robots.txt, and index.html to the actual production URL.",
+    icon: Globe,
+    effort: "30 min (config) or 1-2 hrs (domain purchase + DNS)",
   },
   {
     priority: "high",
