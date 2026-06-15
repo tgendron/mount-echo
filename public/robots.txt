@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://mountecho.com/sitemap.xml
+Sitemap: https://mount-echo.vercel.app/sitemap.xml

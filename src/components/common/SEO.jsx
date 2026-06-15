@@ -1,10 +1,13 @@
 import { Helmet } from "react-helmet-async";
 
+// siteUrl is the canonical production origin. Swap this single constant (and the
+// matching values in index.html, public/robots.txt, public/sitemap.xml) if a
+// custom domain is connected later.
 const defaults = {
   siteName: "Mount Echo",
-  siteUrl: "https://mountecho.com",
+  siteUrl: "https://mount-echo.vercel.app",
   description: "Curated week-long experiences in nature. Corporate retreats, creative residencies, wellness journeys, and coding intensives.",
-  image: "https://mountecho.com/og.png",
+  image: "https://mount-echo.vercel.app/og.png",
 };
 
 export default function SEO({ title, description, path = "", ogType = "website" }) {

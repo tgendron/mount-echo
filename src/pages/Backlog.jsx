@@ -30,12 +30,12 @@ const backlogItems = [
     effort: "1-2 hours",
   },
   {
-    priority: "high",
+    priority: "low",
     category: "Infrastructure",
-    title: "Resolve Canonical Domain Mismatch",
-    description: "SEO tags, canonical URLs, sitemap.xml, and robots.txt all reference https://mountecho.com, but that domain is NOT configured — the live site is mount-echo.vercel.app. Social share cards are broken because scrapers fetch mountecho.com/og.png (the image is deployed, just at the wrong host). Either register/connect mountecho.com in Vercel, or update siteUrl in src/components/common/SEO.jsx, public/sitemap.xml, public/robots.txt, and index.html to the actual production URL.",
+    title: "Connect Custom Domain (optional)",
+    description: "Canonical URLs now point at the live mount-echo.vercel.app origin, so SEO and social share cards work. If a branded domain is wanted, register/connect mountecho.com (or similar) in Vercel, then update siteUrl in src/components/common/SEO.jsx plus the matching values in index.html, public/sitemap.xml, and public/robots.txt. Also swap the placeholder hello@mountecho.com contact email in Footer.jsx / BookingInquiry.jsx for a real inbox.",
     icon: Globe,
-    effort: "30 min (config) or 1-2 hrs (domain purchase + DNS)",
+    effort: "1-2 hrs (domain purchase + DNS)",
   },
   {
     priority: "high",
