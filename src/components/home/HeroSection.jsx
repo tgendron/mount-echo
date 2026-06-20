@@ -26,7 +26,7 @@ export default function HeroSection() {
 
       {/* Coordinate detail */}
       <div aria-hidden="true" className="absolute top-28 right-8 text-[10px] font-mono text-white/20 tracking-wider hidden lg:block">
-        47.6062° N&nbsp;&nbsp;122.3321° W
+        45.2200° N&nbsp;&nbsp;72.5150° W
       </div>
 
       {/* Main content — bottom-anchored */}

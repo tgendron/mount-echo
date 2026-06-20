@@ -15,7 +15,7 @@ export default function Property() {
     <>
       <SEO
         title="The Property"
-        description="Four private bedrooms across two floors, shared common spaces, and the wild beauty of the Pacific Northwest. Explore Mount Echo."
+        description="Four private bedrooms across two floors, shared common spaces, and the wild beauty of Quebec's Eastern Townships. Explore Mount Echo."
         path="/property"
       />
       {/* Hero */}

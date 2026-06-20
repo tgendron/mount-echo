@@ -71,7 +71,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-[13px] text-white/40">{t("footer.location")}</li>
-              <li aria-hidden="true" className="font-mono text-[11px] text-white/20 tracking-wider mt-4">47.6062° N</li>
+              <li aria-hidden="true" className="font-mono text-[11px] text-white/20 tracking-wider mt-4">45.2200° N</li>
             </ul>
           </div>
         </div>

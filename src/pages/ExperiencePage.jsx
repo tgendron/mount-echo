@@ -8,6 +8,7 @@ import ExperienceHighlights from "../components/experience/ExperienceHighlights"
 import ExperienceGallery from "../components/experience/ExperienceGallery";
 import ExperienceItinerary from "../components/experience/ExperienceItinerary";
 import ExperienceAmenities from "../components/experience/ExperienceAmenities";
+import ExperienceLocal from "../components/experience/ExperienceLocal";
 import ExperiencePricing from "../components/experience/ExperiencePricing";
 import ExperienceCTA from "../components/experience/ExperienceCTA";
 
@@ -46,6 +47,7 @@ export default function ExperiencePage() {
       <ExperienceGallery theme={theme} />
       <ExperienceItinerary theme={theme} />
       <ExperienceAmenities theme={theme} />
+      <ExperienceLocal theme={theme} />
       <ExperiencePricing theme={theme} />
       <ExperienceCTA theme={theme} />
     </div>

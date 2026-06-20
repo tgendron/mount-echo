@@ -146,7 +146,7 @@ export default {
   "about.story.title": "Pourquoi nous avons construit ceci",
   "about.story.p1": "Mount Echo est n\u00e9 d\u2019une observation simple : les meilleures id\u00e9es, les connexions les plus profondes et les transformations les plus significatives surviennent quand les gens sortent de leur routine et entrent dans des espaces con\u00e7us pour un but pr\u00e9cis.",
   "about.story.p2": "Nous avons vu des \u00e9quipes r\u00e9server des h\u00f4tels g\u00e9n\u00e9riques pour des s\u00e9minaires qui ressemblaient \u00e0 des journ\u00e9es de bureau allong\u00e9es. Des cr\u00e9ateurs cherchant d\u00e9sesp\u00e9r\u00e9ment des lieux photog\u00e9niques. Des chercheurs de bien-\u00eatre conduisant des heures pour trouver le calme.",
-  "about.story.p3": "Alors nous avons construit quelque chose de diff\u00e9rent \u2014 un domaine unique avec quatre chambres priv\u00e9es, des espaces communs r\u00e9fl\u00e9chis et la beaut\u00e9 naturelle du Pacifique Nord-Ouest. Un lieu qui se transforme selon l\u2019intention de chaque groupe.",
+  "about.story.p3": "Alors nous avons construit quelque chose de diff\u00e9rent \u2014 un domaine unique avec quatre chambres priv\u00e9es, des espaces communs r\u00e9fl\u00e9chis et la beaut\u00e9 naturelle des Cantons-de-l\u2019Est, au Qu\u00e9bec. Un lieu qui se transforme selon l\u2019intention de chaque groupe.",
   "about.story.p4": "Nous y ajoutons une approche de conciergerie compl\u00e8te. Dites-nous qui vient et ce que vous voulez accomplir. Nous concevons la semaine, g\u00e9rons la logistique et cr\u00e9ons les conditions pour que quelque chose de remarquable se produise.",
   "about.values.title": "Ce en quoi nous croyons",
   "about.values.hospitality": "Hospitalit\u00e9 intentionnelle",
@@ -219,7 +219,9 @@ export default {
   "testimonial.3.exp": "Retraite de je\u00fbne",
 
   // Misc UI strings
-  "home.hero.overline": "Nord-Ouest Pacifique \u00b7 Depuis 2024",
+  "home.hero.overline": "Cantons-de-l\u2019Est, Qu\u00e9bec \u00b7 Depuis 2024",
+  "exp.local.title": "Au-del\u00e0 du domaine",
+  "exp.local.subtitle": "Des exp\u00e9riences soigneusement choisies dans la r\u00e9gion de Knowlton / Lac-Brome, adapt\u00e9es \u00e0 cette retraite. Nous g\u00e9rons les r\u00e9servations et la logistique.",
   "home.hero.scroll": "D\u00e9filer",
   "home.prop.photosSoon": "Photographies \u00e0 venir",
   "home.prop.elevLabel": "Altitude",
@@ -227,5 +229,5 @@ export default {
   "property.bed.king": "Lit king",
   "property.bed.queen": "Lit queen",
   "journal.by": "Par",
-  "footer.location": "Nord-Ouest Pacifique",
+  "footer.location": "Knowlton · Cantons-de-l’Est, Québec",
 };

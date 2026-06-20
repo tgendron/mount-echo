@@ -3,10 +3,10 @@ export const property = {
   tagline: "Where intention meets elevation",
   description: "A curated hospitality property nestled in nature, designed for transformative week-long experiences. Four private bedrooms across two floors, shared common spaces built for connection, and the wild beauty of the outdoors just beyond the door.",
   location: {
-    address: "Mount Echo Retreat",
-    region: "Pacific Northwest",
+    address: "10 chemin du Mont Echo, Knowlton (Lac-Brome), QC",
+    region: "Eastern Townships, Québec",
     elevation: "2,400 ft",
-    nearestAirport: "45 min drive",
+    nearestAirport: "Montréal-Trudeau (YUL) ~1 hr 15 min",
     directions: "Detailed directions provided upon booking confirmation.",
   },
   floors: [

@@ -146,7 +146,7 @@ export default {
   "about.story.title": "Why We Built This",
   "about.story.p1": "Mount Echo started with a simple observation: the best ideas, deepest connections, and most meaningful transformations happen when people step out of their routines and into spaces designed for a purpose.",
   "about.story.p2": "We saw corporate teams booking generic hotels for offsites that felt like extended office days. Creators scrambling to find photogenic locations with basic amenities. Wellness seekers driving hours to find quiet.",
-  "about.story.p3": "So we built something different \u2014 a single property with four private bedrooms, thoughtful common spaces, and the natural beauty of the Pacific Northwest at the doorstep. One location that transforms to match the intention of each group.",
+  "about.story.p3": "So we built something different \u2014 a single property with four private bedrooms, thoughtful common spaces, and the natural beauty of Quebec's Eastern Townships at the doorstep. One location that transforms to match the intention of each group.",
   "about.story.p4": "We pair this with a full-service concierge approach. You tell us who\u2019s coming and what you want to accomplish. We design the week, handle the logistics, and create the conditions for something remarkable to happen.",
   "about.values.title": "What We Believe",
   "about.values.hospitality": "Intentional Hospitality",
@@ -219,7 +219,9 @@ export default {
   "testimonial.3.exp": "Fasting Retreat",
 
   // Misc UI strings
-  "home.hero.overline": "Pacific Northwest · Est. 2024",
+  "home.hero.overline": "Eastern Townships, Québec · Est. 2024",
+  "exp.local.title": "Beyond the Property",
+  "exp.local.subtitle": "Curated experiences nearby in the Knowlton / Lac-Brome region, matched to this retreat. We handle the bookings and logistics.",
   "home.hero.scroll": "Scroll",
   "home.prop.photosSoon": "Photography arriving soon",
   "home.prop.elevLabel": "Elevation",
@@ -227,5 +229,5 @@ export default {
   "property.bed.king": "King Bed",
   "property.bed.queen": "Queen Bed",
   "journal.by": "By",
-  "footer.location": "Pacific Northwest",
+  "footer.location": "Knowlton · Eastern Townships, Québec",
 };
