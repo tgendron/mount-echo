@@ -88,8 +88,8 @@ const backlogItems = [
   {
     priority: "low",
     category: "Revenue",
-    title: "Stripe Payment Integration",
-    description: "Move from inquiry-based to deposit-based booking. Add Stripe Checkout for 50% deposit on confirmation. Handle refund policies, payment reminders for balance due, and receipt generation.",
+    title: "Stripe Checkout (dynamic) & Webhooks",
+    description: "Shipped: a $500 deposit via Stripe Payment Link on the booking page (set VITE_STRIPE_DEPOSIT_URL). Remaining: serverless Stripe Checkout for dynamic amounts (50% of the experience price), webhook handling to mark inquiries paid, balance reminders, and receipts.",
     icon: CreditCard,
     effort: "3-5 days dev work",
   },

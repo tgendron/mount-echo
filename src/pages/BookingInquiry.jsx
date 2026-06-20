@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Mail, Phone, Calendar, Users, CheckCircle } from "lucide-react";
+import { Mail, Phone, Calendar, Users, CheckCircle, CreditCard } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
 import { useLocale } from "../hooks/useLocale";
@@ -7,10 +7,15 @@ import { useLocale } from "../hooks/useLocale";
 // Replace with your Formspree form ID after creating one at https://formspree.io
 const FORMSPREE_ID = "xpwzgkby";
 
+// Stripe Payment Link for the $500 deposit. Create one in the Stripe dashboard
+// (Payment Links → fixed amount $500) and set VITE_STRIPE_DEPOSIT_URL.
+const DEPOSIT_URL = import.meta.env.VITE_STRIPE_DEPOSIT_URL;
+
 export default function BookingInquiry() {
   const { t } = useLocale();
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const today = new Date().toISOString().split("T")[0];
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -99,7 +104,7 @@ export default function BookingInquiry() {
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.dates")}</label>
-                        <input name="dates" type="text" className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" placeholder={t("book.form.dates.ph")} />
+                        <input name="dates" type="date" min={today} className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white [color-scheme:light] dark:[color-scheme:dark]" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.group")}</label>
@@ -153,6 +158,28 @@ export default function BookingInquiry() {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* Deposit */}
+              <div className="mt-6 bg-gray-900 dark:bg-gray-800 rounded-2xl p-8 text-center">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
+                  <CreditCard size={22} className="text-white" />
+                </div>
+                <h3 className="font-semibold text-white mb-1">{t("book.deposit.title")}</h3>
+                <p className="font-serif text-3xl font-bold text-white mb-2">$500</p>
+                <p className="text-xs text-gray-300 leading-relaxed mb-6">{t("book.deposit.desc")}</p>
+                {DEPOSIT_URL ? (
+                  <a
+                    href={DEPOSIT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary w-full dark:!bg-white dark:!text-gray-900"
+                  >
+                    {t("book.deposit.cta")}
+                  </a>
+                ) : (
+                  <p className="text-xs text-gray-400 italic">{t("book.deposit.soon")}</p>
+                )}
               </div>
             </div>
           </div>
