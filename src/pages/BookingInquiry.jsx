@@ -166,7 +166,7 @@ export default function BookingInquiry() {
                   <CreditCard size={22} className="text-white" />
                 </div>
                 <h3 className="font-semibold text-white mb-1">{t("book.deposit.title")}</h3>
-                <p className="font-serif text-3xl font-bold text-white mb-2">$500</p>
+                <p className="font-serif text-3xl font-bold text-white mb-2">$500 <span className="text-base font-sans font-normal text-gray-400">CAD</span></p>
                 <p className="text-xs text-gray-300 leading-relaxed mb-6">{t("book.deposit.desc")}</p>
                 {DEPOSIT_URL ? (
                   <a

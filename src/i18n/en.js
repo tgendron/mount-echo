@@ -139,8 +139,8 @@ export default {
   "book.sidebar.phone": "Direct Line",
   "book.sidebar.phone.desc": "Prefer to talk? Call us at (555) 123-4567.",
   "book.deposit.title": "Hold Your Week",
-  "book.deposit.desc": "Reserve your dates with a refundable $500 deposit, applied to your final balance. Secure checkout via Stripe.",
-  "book.deposit.cta": "Pay $500 Deposit",
+  "book.deposit.desc": "Reserve your dates with a refundable $500 CAD deposit, applied to your final balance. Secure checkout via Stripe.",
+  "book.deposit.cta": "Pay $500 CAD Deposit",
   "book.deposit.soon": "A secure deposit link is sent with your inquiry confirmation.",
 
   // About
