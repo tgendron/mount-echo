@@ -64,7 +64,7 @@ export default function Header() {
             to="/"
             className={`font-serif text-lg lg:text-xl font-bold tracking-tight transition-colors ${
               !scrolled && isHeroPage
-                ? "text-white"
+                ? "text-[#0B0B0B] dark:text-white"
                 : "text-[#0B0B0B] dark:text-white"
             }`}
           >
@@ -84,7 +84,7 @@ export default function Header() {
                   <button
                     className={`flex items-center gap-1 text-[13px] font-medium transition-colors ${
                       !scrolled && isHeroPage
-                        ? "text-white/70 hover:text-white"
+                        ? "text-[#0B0B0B]/70 dark:text-white/70 hover:text-[#0B0B0B] dark:hover:text-white"
                         : "text-[#0B0B0B]/60 dark:text-white/60 hover:text-[#0B0B0B] dark:hover:text-white"
                     }`}
                   >
@@ -122,9 +122,9 @@ export default function Header() {
                   to={link.path}
                   className={`text-[13px] font-medium transition-colors ${
                     location.pathname === link.path
-                      ? (!scrolled && isHeroPage ? "text-white" : "text-[#0B0B0B] dark:text-white")
+                      ? "text-[#0B0B0B] dark:text-white"
                       : (!scrolled && isHeroPage
-                          ? "text-white/70 hover:text-white"
+                          ? "text-[#0B0B0B]/70 dark:text-white/70 hover:text-[#0B0B0B] dark:hover:text-white"
                           : "text-[#0B0B0B]/60 dark:text-white/60 hover:text-[#0B0B0B] dark:hover:text-white")
                   }`}
                 >
@@ -138,7 +138,7 @@ export default function Header() {
               onClick={toggleTheme}
               className={`p-1.5 rounded-full transition-colors ${
                 !scrolled && isHeroPage
-                  ? "text-white/50 hover:text-white hover:bg-white/10"
+                  ? "text-[#0B0B0B]/50 dark:text-white/50 hover:text-[#0B0B0B] dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10"
                   : "text-[#0B0B0B]/40 dark:text-white/40 hover:text-[#0B0B0B] dark:hover:text-white hover:bg-[#0B0B0B]/6 dark:hover:bg-white/8"
               }`}
               aria-label="Toggle dark mode"
@@ -151,7 +151,7 @@ export default function Header() {
               onClick={() => setLocale(locale === "en" ? "fr" : "en")}
               className={`text-[11px] font-medium tracking-widest transition-colors ${
                 !scrolled && isHeroPage
-                  ? "text-white/50 hover:text-white"
+                  ? "text-[#0B0B0B]/50 dark:text-white/50 hover:text-[#0B0B0B] dark:hover:text-white"
                   : "text-[#0B0B0B]/40 dark:text-white/40 hover:text-[#0B0B0B] dark:hover:text-white"
               }`}
               aria-label="Toggle language"
@@ -162,7 +162,7 @@ export default function Header() {
             <Link
               to="/book"
               className={`btn text-[13px] !py-2 !px-5 ${
-                !scrolled && isHeroPage ? "btn-ghost-light" : "btn-primary"
+                !scrolled && isHeroPage ? "btn-ghost" : "btn-primary"
               }`}
             >
               {t("nav.book")}
@@ -173,7 +173,7 @@ export default function Header() {
           <button
             className={`lg:hidden p-1.5 transition-colors ${
               !scrolled && isHeroPage
-                ? "text-white/70"
+                ? "text-[#0B0B0B]/70 dark:text-white/70"
                 : "text-[#0B0B0B]/70 dark:text-white/70"
             }`}
             onClick={() => setMobileOpen(!mobileOpen)}
