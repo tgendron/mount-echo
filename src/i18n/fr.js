@@ -82,12 +82,12 @@ export default {
   "exp.fasting.pricing.headline": "Votre investissement bien-\u00eatre",
 
   // Coding
-  "exp.coding.name": "Bootcamps de code",
-  "exp.coding.tagline": "Coder. Tisser des liens. Progresser.",
-  "exp.coding.heroHeadline": "Coder mieux,\nensemble",
-  "exp.coding.heroSub": "Intensifs de code immersifs d\u2019une semaine. Internet rapide, concentration profonde et le genre de perc\u00e9es qui n\u2019arrivent que lorsqu\u2019on se d\u00e9connecte de tout le reste.",
-  "exp.coding.introTitle": "La retraite d\u00e9veloppeur",
-  "exp.coding.introBody": "Mount Echo est con\u00e7u pour le travail technique en profondeur. Internet haut d\u00e9bit fiable, bureaux debout, \u00e9crans externes disponibles et espaces con\u00e7us pour le pair programming et les sessions de flow. Sortez courir entre les sprints, puis revenez r\u00e9soudre le bug qui vous bloquait depuis des semaines.",
+  "exp.coding.name": "Coding & Claude Camp",
+  "exp.coding.tagline": "Codez. Construisez. Progressez — avec l’IA.",
+  "exp.coding.heroHeadline": "Mieux coder,\nlivrer plus vite",
+  "exp.coding.heroSub": "Des intensifs immersifs d\u2019une semaine pour les \u00e9quipes techniques et les fondateurs propuls\u00e9s par l\u2019IA. Internet rapide, concentration profonde, Claude comme copilote et les perc\u00e9es qui n\u2019arrivent que lorsqu\u2019on se d\u00e9connecte de tout le reste.",
+  "exp.coding.introTitle": "La retraite des d\u00e9veloppeurs et fondateurs",
+  "exp.coding.introBody": "Mount Echo est con\u00e7u pour le travail technique en profondeur. Internet haute vitesse fiable, bureaux debout, \u00e9crans multiples et des espaces pens\u00e9s pour le pair programming, la concentration solo et la cr\u00e9ation assist\u00e9e par l\u2019IA en direct. Que vous livriez une fonctionnalit\u00e9 bloqu\u00e9e depuis des semaines ou que vous passiez du MVP \u00e0 la traction avec Claude comme copilote, sortez courir sur un sentier entre deux sprints \u2014 puis revenez livrer.",
   "exp.coding.cta": "R\u00e9servez votre sprint",
   "exp.coding.pricing.headline": "Votre investissement sprint",
 

@@ -28,7 +28,6 @@ export default function Footer() {
                 ["influencer-filming", t("exp.influencer.name")],
                 ["fasting-retreats",   t("exp.fasting.name")],
                 ["coding-bootcamps",   t("exp.coding.name")],
-                ["claude-camp",        t("exp.claude.name")],
               ].map(([slug, label]) => (
                 <li key={slug}>
                   <Link

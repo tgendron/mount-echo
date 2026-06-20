@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import GuestLayout from "./layouts/GuestLayout";
 import Home from "./pages/Home";
 import ExperiencePage from "./pages/ExperiencePage";
@@ -26,6 +26,8 @@ export default function App() {
           {/* Guest-facing */}
           <Route element={<GuestLayout />}>
             <Route index element={<Home />} />
+            {/* Claude Camp merged into Coding & Claude Camp — keep old links alive */}
+            <Route path="experience/claude-camp" element={<Navigate to="/experience/coding-bootcamps" replace />} />
             <Route path="experience/:slug" element={<ExperiencePage />} />
             <Route path="property" element={<Property />} />
             <Route path="book" element={<BookingInquiry />} />

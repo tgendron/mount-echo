@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
-import { posts } from "../config/journal";
+import { posts as rawPosts } from "../config/journal";
 import { useLocale } from "../hooks/useLocale";
+import { localize } from "../i18n/localize";
 
 export default function Journal() {
   const { t, locale } = useLocale();
+  const posts = localize(rawPosts, locale);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (

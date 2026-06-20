@@ -1,14 +1,16 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { property } from "../config/property";
+import { property as rawProperty } from "../config/property";
 import { Bed, MapPin } from "lucide-react";
 import { iconMap } from "../config/icons";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
 import { useLocale } from "../hooks/useLocale";
+import { localize } from "../i18n/localize";
 
 export default function Property() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
+  const property = localize(rawProperty, locale);
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
   return (

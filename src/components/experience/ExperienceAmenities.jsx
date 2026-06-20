@@ -1,10 +1,11 @@
 import { iconMap } from "../../config/icons";
 import { property } from "../../config/property";
 import { useLocale } from "../../hooks/useLocale";
+import { localize } from "../../i18n/localize";
 
 export default function ExperienceAmenities({ theme }) {
-  const { t } = useLocale();
-  const amenities = property.amenities.filter((a) =>
+  const { t, locale } = useLocale();
+  const amenities = localize(property.amenities, locale).filter((a) =>
     theme.featuredAmenities.includes(a.id)
   );
 

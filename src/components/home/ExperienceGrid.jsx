@@ -8,7 +8,6 @@ const cardColors = {
   "influencer-filming":  "from-[#1A1A1A] via-[#2a2a2a] to-[#1A1A1A]",
   "fasting-retreats":    "from-[#0F1F18] via-[#1a3528] to-[#0F1F18]",
   "coding-bootcamps":    "from-[#141414] via-[#1e1e1e] to-[#141414]",
-  "claude-camp":         "from-[#1A0A00] via-[#2d1200] to-[#1A0A00]",
 };
 
 const accentColors = {
@@ -16,7 +15,6 @@ const accentColors = {
   "influencer-filming": "text-gray-400/60",
   "fasting-retreats":   "text-emerald-400/60",
   "coding-bootcamps":   "text-cyan-400/60",
-  "claude-camp":        "text-orange-400/60",
 };
 
 const slugKeyMap = {
@@ -24,7 +22,6 @@ const slugKeyMap = {
   "influencer-filming": "influencer",
   "fasting-retreats":   "fasting",
   "coding-bootcamps":   "coding",
-  "claude-camp":        "claude",
 };
 
 export default function ExperienceGrid() {

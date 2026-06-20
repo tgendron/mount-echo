@@ -17,7 +17,7 @@ export const localExperiences = [
     season: "Four-season",
     description:
       "An 11.15 km lakeshore trail from Knowlton village to Foster — walking and cycling in summer, cross-country skiing and snowshoeing in winter.",
-    suits: ["corporate-offsites", "coding-bootcamps", "claude-camp", "fasting-retreats", "influencer-filming"],
+    suits: ["corporate-offsites", "coding-bootcamps", "fasting-retreats", "influencer-filming"],
     url: "https://tourismelacbrome.com/en/attraction/sentier-argyll/",
   },
   {
@@ -28,7 +28,7 @@ export const localExperiences = [
     season: "Four-season",
     description:
       "A four-season mountain resort with a dedicated corporate-events program (rentable venues up to ~175 people, catering), winter skiing, and 20+ chairlift-served downhill bike trails in summer.",
-    suits: ["corporate-offsites", "coding-bootcamps", "claude-camp", "influencer-filming"],
+    suits: ["corporate-offsites", "coding-bootcamps", "influencer-filming"],
     url: "https://www.bromontmontagne.com/en/",
   },
   {
@@ -39,7 +39,7 @@ export const localExperiences = [
     season: "Four-season",
     description:
       "Natural-snow gladed skiing with a reputation as the best in Canada, plus summer hiking, mountain biking, disc golf, chairlift rides, and a zipline.",
-    suits: ["corporate-offsites", "coding-bootcamps", "claude-camp", "influencer-filming"],
+    suits: ["corporate-offsites", "coding-bootcamps", "influencer-filming"],
     url: "https://montsutton.com/en/",
   },
   {
@@ -61,7 +61,7 @@ export const localExperiences = [
     season: "Four-season",
     description:
       "A riverside yoga lodge in Lac-Brome offering classes, partner massage therapy, and co-working space — available for exclusive group buyouts.",
-    suits: ["fasting-retreats", "corporate-offsites", "claude-camp"],
+    suits: ["fasting-retreats", "corporate-offsites", "coding-bootcamps"],
     url: "https://aubergeyogasalamandre.com/",
   },
   {
@@ -72,7 +72,7 @@ export const localExperiences = [
     season: "Four-season",
     description:
       "An in-village yoga and wellness studio — Hatha, Vinyasa, Yin, Pilates (mat and reformer), Essentrics, and meditation — with private sessions bookable via Rent the Well.",
-    suits: ["fasting-retreats", "claude-camp"],
+    suits: ["fasting-retreats", "coding-bootcamps"],
     url: "https://www.knowltonwell.com/",
   },
   {
@@ -105,7 +105,7 @@ export const localExperiences = [
     season: "Four-season",
     description:
       "A walkable Victorian heritage core (the free self-guided Knowlton Circuit, 17 stops) and the Lac-Brome Museum — photogenic backdrops and local history.",
-    suits: ["influencer-filming", "corporate-offsites", "coding-bootcamps", "claude-camp", "fasting-retreats"],
+    suits: ["influencer-filming", "corporate-offsites", "coding-bootcamps", "fasting-retreats"],
     url: "https://tourismelacbrome.com/en/attraction/the-knowlton-circuit/",
   },
 ];

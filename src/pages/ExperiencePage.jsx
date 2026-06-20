@@ -2,6 +2,8 @@ import { useParams, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { experiences } from "../config/experiences";
 import { useTheme } from "../hooks/useTheme";
+import { useLocale } from "../hooks/useLocale";
+import { localize } from "../i18n/localize";
 import SEO from "../components/common/SEO";
 import ExperienceHero from "../components/experience/ExperienceHero";
 import ExperienceIntro from "../components/experience/ExperienceIntro";
@@ -26,14 +28,16 @@ const darkSurfaces = {
 export default function ExperiencePage() {
   const { slug } = useParams();
   const { theme: mode } = useTheme();
-  const theme = experiences[slug];
+  const { locale } = useLocale();
+  const rawTheme = experiences[slug];
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  if (!theme) return <Navigate to="/" replace />;
+  if (!rawTheme) return <Navigate to="/" replace />;
 
+  const theme = localize(rawTheme, locale);
   const dark = mode === "dark";
   const activeTheme = dark
     ? { ...theme, colors: { ...theme.colors, ...darkSurfaces } }

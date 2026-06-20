@@ -86,14 +86,6 @@ const backlogItems = [
     effort: "1-2 days dev work",
   },
   {
-    priority: "medium",
-    category: "Content",
-    title: "French Content Translation",
-    description: "UI chrome is fully bilingual, but config-driven content is English-only: room names and descriptions, experience itineraries/highlights, journal posts, and per-page SEO meta descriptions. Hold until analytics confirms meaningful French traffic, then translate configs and localize the SEO component.",
-    icon: Globe,
-    effort: "1-2 days + translation",
-  },
-  {
     priority: "low",
     category: "Revenue",
     title: "Stripe Payment Integration",
@@ -170,6 +162,10 @@ export default function Backlog() {
               "OG share image + LodgingBusiness JSON-LD",
               "Code-split bundle (984 kB → 354 kB)",
               "Bilingual UI incl. localized dates (EN/FR)",
+              "Full EN/FR content (experiences, property, journal)",
+              "Light/dark mode across all pages",
+              "Nearby-experiences by retreat type (region-matched)",
+              "Located in Knowlton / Eastern Townships, Québec",
               "Backlog moved behind the admin gate",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-green-800 dark:text-green-300 bg-white dark:bg-gray-900 rounded-lg px-3 py-2 border border-green-100 dark:border-green-900">

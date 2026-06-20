@@ -82,12 +82,12 @@ export default {
   "exp.fasting.pricing.headline": "Your Healing Investment",
 
   // Coding
-  "exp.coding.name": "Coding Bootcamps",
-  "exp.coding.tagline": "Ship code. Build bonds. Level up.",
-  "exp.coding.heroHeadline": "Code Better,\nTogether",
-  "exp.coding.heroSub": "Immersive week-long coding intensives. Fast internet, deep focus, and the kind of breakthroughs that only happen when you unplug from everything else.",
-  "exp.coding.introTitle": "The Developer Retreat",
-  "exp.coding.introBody": "Mount Echo is purpose-built for deep technical work. Reliable high-speed internet, standing desks, multiple monitors available, and spaces designed for both pair programming and solo flow states. Step outside for a trail run between sprints, then come back to ship the feature you\u2019ve been stuck on for weeks.",
+  "exp.coding.name": "Coding & Claude Camp",
+  "exp.coding.tagline": "Ship code. Build product. Level up — with AI.",
+  "exp.coding.heroHeadline": "Code Better,\nShip Faster",
+  "exp.coding.heroSub": "Immersive week-long intensives for engineering teams and AI-powered founders. Fast internet, deep focus, Claude as your co-pilot, and the breakthroughs that only happen when you unplug from everything else.",
+  "exp.coding.introTitle": "The Developer & Founder Retreat",
+  "exp.coding.introBody": "Mount Echo is purpose-built for deep technical work. Reliable high-speed internet, standing desks, multiple monitors, and spaces designed for pair programming, solo flow, and live AI-assisted building. Whether you\u2019re shipping a feature you\u2019ve been stuck on for weeks or going from MVP to traction with Claude as your co-pilot, step outside for a trail run between sprints \u2014 then come back and ship.",
   "exp.coding.cta": "Book Your Sprint",
   "exp.coding.pricing.headline": "Your Sprint Investment",
 

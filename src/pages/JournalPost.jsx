@@ -3,17 +3,20 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Container from "../components/common/Container";
 import SEO from "../components/common/SEO";
-import { posts } from "../config/journal";
+import { posts as rawPosts } from "../config/journal";
 import { useLocale } from "../hooks/useLocale";
+import { localize } from "../i18n/localize";
 
 export default function JournalPost() {
   const { t, locale } = useLocale();
   const { slug } = useParams();
-  const post = posts.find((p) => p.slug === slug);
+  const rawPost = rawPosts.find((p) => p.slug === slug);
 
   useEffect(() => { window.scrollTo(0, 0); }, [slug]);
 
-  if (!post) return <Navigate to="/journal" replace />;
+  if (!rawPost) return <Navigate to="/journal" replace />;
+
+  const post = localize(rawPost, locale);
 
   return (
     <>
