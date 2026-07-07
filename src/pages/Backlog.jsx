@@ -47,6 +47,22 @@ const backlogItems = [
   },
   {
     priority: "high",
+    category: "Revenue",
+    title: "Connect the Stripe deposit link",
+    description: "The $500 CAD deposit card is built and live, but dormant. Create a fixed-amount ($500 CAD) Payment Link in the Stripe dashboard, then set VITE_STRIPE_DEPOSIT_URL in Vercel (production + preview) and .env.local. The 'Pay $500 CAD Deposit' button activates automatically once set; until then the booking page shows a graceful fallback.",
+    icon: CreditCard,
+    effort: "2 minutes — Stripe + Vercel",
+  },
+  {
+    priority: "high",
+    category: "Content",
+    title: "Replace placeholder contact details",
+    description: "The booking sidebar shows a placeholder phone (555) 123-4567 and the site uses hello@mountecho.com, an unregistered domain. Swap both for a real, monitored phone and inbox before sharing the site widely — these are the actual conversion paths. Update book.sidebar.phone.desc in the i18n files and the mailto references in Footer.jsx and BookingInquiry.jsx.",
+    icon: Mail,
+    effort: "15 minutes once details exist",
+  },
+  {
+    priority: "high",
     category: "Infrastructure",
     title: "Set VITE_ADMIN_PASSWORD for Preview Deployments",
     description: "The admin gate password is set for Production via the Vercel CLI, but the CLI could not target the Preview environment non-interactively. Add the same variable for Preview in the Vercel dashboard (Settings → Environment Variables) so branch deploys can access /admin. Until then, preview deploys safely deny all admin access.",
