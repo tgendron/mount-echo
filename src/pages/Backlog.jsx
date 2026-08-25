@@ -102,6 +102,22 @@ const backlogItems = [
     effort: "1-2 days dev work",
   },
   {
+    priority: "medium",
+    category: "SEO",
+    title: "Prerender routes for per-page social cards",
+    description: "This is a client-rendered SPA, so social scrapers (LinkedIn, Facebook, Slack) that don't run JavaScript only ever read the generic tags in index.html — every shared link shows the same title, description, and image regardless of page. React Helmet does set per-page tags, but only after JS runs, which also means each page briefly carries two meta description tags. Fix by prerendering routes at build time (vite-plugin-ssg / prerender) or moving to a framework with SSG, then drop the static fallbacks from index.html.",
+    icon: Globe,
+    effort: "1 day",
+  },
+  {
+    priority: "low",
+    category: "Content",
+    title: "Localize the admin area (optional)",
+    description: "Guest-facing pages are fully EN/FR, but the admin pages (dashboard, availability, inquiries, concierge, backlog) are English-only with hardcoded strings. Intentional for now since admin is internal and password-gated \u2014 only worth doing if French-speaking staff will use it.",
+    icon: Globe,
+    effort: "half day",
+  },
+  {
     priority: "low",
     category: "Revenue",
     title: "Stripe Checkout (dynamic) & Webhooks",
@@ -183,6 +199,9 @@ export default function Backlog() {
               "Nearby-experiences by retreat type (region-matched)",
               "Located in Knowlton / Eastern Townships, Québec",
               "Backlog moved behind the admin gate",
+              "Localized SEO titles + descriptions (EN/FR)",
+              "Accessible form labels on the booking form",
+              "Dependencies current \u2014 0 security advisories",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-green-800 dark:text-green-300 bg-white dark:bg-gray-900 rounded-lg px-3 py-2 border border-green-100 dark:border-green-900">
                 <span className="w-4 h-4 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center shrink-0">

@@ -9,21 +9,6 @@
 }
 
 @layer components {
-  /* Theme color utilities */
-  .theme-primary { color: var(--color-primary); }
-  .theme-secondary { color: var(--color-secondary); }
-  .theme-accent { color: var(--color-accent); }
-  .theme-bg-primary { background-color: var(--color-primary); }
-  .theme-bg-secondary { background-color: var(--color-secondary); }
-  .theme-bg-accent { background-color: var(--color-accent); }
-  .theme-bg-surface { background-color: var(--color-surface); }
-  .theme-bg-background { background-color: var(--color-background); }
-  .theme-bg-hero { background-color: var(--color-hero-bg); }
-  .theme-text-hero { color: var(--color-hero-text); }
-  .theme-text-muted { color: var(--color-text-muted); }
-  .theme-border-primary { border-color: var(--color-primary); }
-  .theme-border-accent { border-color: var(--color-accent); }
-
   /* Buttons — pill-shaped, high-contrast */
   .btn {
     @apply inline-flex items-center justify-center px-7 py-3 rounded-full font-medium transition-all duration-200 cursor-pointer text-sm tracking-wide;
@@ -32,15 +17,6 @@
   /* Primary: black on white */
   .btn-primary {
     @apply bg-[#0B0B0B] text-white hover:bg-[#2a2a2a] dark:bg-white dark:text-[#0B0B0B] dark:hover:bg-gray-100;
-  }
-
-  /* Theme primary: uses CSS var */
-  .btn-theme-primary {
-    background-color: var(--color-primary, #0B0B0B);
-    color: white;
-  }
-  .btn-theme-primary:hover {
-    filter: brightness(1.15);
   }
 
   /* Accent: uses CSS var */
@@ -57,30 +33,9 @@
     @apply border border-[#0B0B0B]/20 text-[#0B0B0B] bg-transparent hover:bg-[#0B0B0B] hover:text-white dark:border-white/20 dark:text-white dark:hover:bg-white dark:hover:text-[#0B0B0B];
   }
 
-  /* Ghost light: for dark backgrounds */
-  .btn-ghost-light {
-    @apply border border-white/25 text-white/80 bg-transparent hover:bg-white/10 hover:text-white;
-  }
-
-  /* Outline using theme color */
-  .btn-outline {
-    @apply border bg-transparent rounded-full;
-    border-color: var(--color-primary, #0B0B0B);
-    color: var(--color-primary, #0B0B0B);
-  }
-  .btn-outline:hover {
-    background-color: var(--color-primary, #0B0B0B);
-    color: white;
-  }
-
   /* Label / overline style */
   .label-overline {
     @apply text-[10px] uppercase tracking-[0.35em] font-medium text-[#0B0B0B]/40 dark:text-white/40;
-  }
-
-  /* Mono accent (for prices, stats, etc) */
-  .font-mono-accent {
-    font-family: var(--font-mono);
   }
 }
 
@@ -102,30 +57,3 @@
   }
 }
 
-@layer utilities {
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Section dividers */
-  .section-light {
-    @apply bg-[#F8F5F0] dark:bg-[#111111];
-  }
-  .section-white {
-    @apply bg-white dark:bg-[#0F0F0F];
-  }
-  .section-dark {
-    @apply bg-[#0B0B0B] dark:bg-[#050505];
-  }
-
-  /* Architectural grid line */
-  .grid-line {
-    @apply border-[#0B0B0B]/8 dark:border-white/8;
-  }
-}

@@ -38,6 +38,7 @@ export default function ExperienceLocal({ theme }) {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${item.name} — ${t("exp.local.newTab")}`}
                 className="group block rounded-xl border p-5 transition-colors"
                 style={{ borderColor: `${theme.colors.primary}15`, backgroundColor: theme.colors.surface }}
               >

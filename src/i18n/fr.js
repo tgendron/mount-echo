@@ -116,10 +116,9 @@ export default {
   "book.form.experience.corporate": "S\u00e9minaire d\u2019entreprise",
   "book.form.experience.influencer": "Tournage influenceur",
   "book.form.experience.fasting": "Retraite de je\u00fbne",
-  "book.form.experience.coding": "Bootcamp de code",
+  "book.form.experience.coding": "Coding & Claude Camp",
   "book.form.experience.custom": "Personnalis\u00e9 / Autre",
   "book.form.dates": "Dates souhait\u00e9es",
-  "book.form.dates.ph": "ex. 2-6 juin 2026",
   "book.form.group": "Taille du groupe",
   "book.form.group.ph": "ex. 4-8 personnes",
   "book.form.message": "Dites-nous en plus",
@@ -191,15 +190,14 @@ export default {
   "notfound.body": "La page que vous cherchez n\u2019existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
   "notfound.btn": "Retour \u00e0 l\u2019accueil",
 
-  // Claude Camp
-  "exp.claude.name": "Claude Camp",
-  "exp.claude.tagline": "MVP à la traction en 5 jours.",
-  "exp.claude.heroHeadline": "De l'idée\nà la traction.",
-  "exp.claude.heroSub": "Un intensif fondateur d'une semaine propulsé par l'IA. Construisez votre produit, affinez votre GTM et lancez — avec Claude comme co-pilote.",
-  "exp.claude.introTitle": "Qu'est-ce que Claude Camp?",
-  "exp.claude.introBody": "Claude Camp est un intensif de 5 jours pour les fondateurs et les builders prêts à aller vite. Arrivez avec votre MVP, vos questions et votre ambition. Repartez avec de la traction, une stratégie GTM affinée et les workflows IA qui définiront votre façon de builder.",
-  "exp.claude.cta": "Candidater à Claude Camp",
-  "exp.claude.pricing.headline": "Votre investissement traction",
+  "exp.local.newTab": "s\u2019ouvre dans un nouvel onglet",
+
+  // SEO descriptions
+  "seo.default.desc": "Des exp\u00e9riences immersives d\u2019une semaine en pleine nature pr\u00e8s de Knowlton, au Qu\u00e9bec. Retraites d\u2019entreprise, r\u00e9sidences cr\u00e9atives, parcours bien-\u00eatre et intensifs de code.",
+  "seo.property.desc": "Quatre chambres priv\u00e9es sur deux \u00e9tages, des espaces communs partag\u00e9s et la beaut\u00e9 sauvage des Cantons-de-l\u2019Est. D\u00e9couvrez Mount Echo.",
+  "seo.book.desc": "Planifiez votre semaine \u00e0 Mount Echo. Parlez-nous de votre groupe et de vos objectifs, et nous concevrons une exp\u00e9rience sur mesure.",
+  "seo.about.desc": "L\u2019histoire derri\u00e8re Mount Echo. Un domaine b\u00e2ti sur la conviction que le bon environnement transforme la fa\u00e7on dont les \u00e9quipes travaillent et dont chacun se reconnecte.",
+  "seo.journal.desc": "R\u00e9flexions sur la planification de retraites, les s\u00e9minaires d\u2019\u00e9quipe, le bien-\u00eatre et l\u2019exp\u00e9rience Mount Echo.",
 
   // Footer
   "footer.desc": "Un domaine d\u2019hospitalit\u00e9 pour des exp\u00e9riences transformatrices d\u2019une semaine. Retraites d\u2019entreprise, r\u00e9sidences cr\u00e9atives, parcours bien-\u00eatre et plus encore.",

@@ -15,8 +15,8 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About"
-        description="The story behind Mount Echo. A property built on the belief that the right environment can transform how teams work and individuals reconnect."
+        title={t("nav.about")}
+        description={t("seo.about.desc")}
         path="/about"
       />
       {/* Hero */}

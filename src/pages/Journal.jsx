@@ -15,8 +15,8 @@ export default function Journal() {
   return (
     <>
       <SEO
-        title="Journal"
-        description="Insights on retreat planning, team offsites, wellness, and the Mount Echo experience."
+        title={t("nav.journal")}
+        description={t("seo.journal.desc")}
         path="/journal"
       />
       <section className="bg-gray-900 py-24 md:py-32">

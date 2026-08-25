@@ -16,8 +16,8 @@ export default function Property() {
   return (
     <>
       <SEO
-        title="The Property"
-        description="Four private bedrooms across two floors, shared common spaces, and the wild beauty of Quebec's Eastern Townships. Explore Mount Echo."
+        title={t("nav.property")}
+        description={t("seo.property.desc")}
         path="/property"
       />
       {/* Hero */}

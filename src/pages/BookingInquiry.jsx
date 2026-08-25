@@ -43,8 +43,8 @@ export default function BookingInquiry() {
   return (
     <>
       <SEO
-        title="Book a Stay"
-        description="Plan your week at Mount Echo. Tell us about your group and goals, and we'll design a tailored experience."
+        title={t("nav.book")}
+        description={t("seo.book.desc")}
         path="/book"
       />
       <section className="bg-gray-900 py-24 md:py-32">
@@ -80,18 +80,18 @@ export default function BookingInquiry() {
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.name")}</label>
-                        <input name="name" type="text" required className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" placeholder={t("book.form.name.ph")} />
+                        <label htmlFor="bk-name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.name")}</label>
+                        <input id="bk-name" name="name" type="text" required className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" placeholder={t("book.form.name.ph")} />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.email")}</label>
-                        <input name="email" type="email" required className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" placeholder={t("book.form.email.ph")} />
+                        <label htmlFor="bk-email" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.email")}</label>
+                        <input id="bk-email" name="email" type="email" required className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" placeholder={t("book.form.email.ph")} />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.experience")}</label>
-                      <select name="experience" required className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white">
+                      <label htmlFor="bk-experience" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.experience")}</label>
+                      <select id="bk-experience" name="experience" required className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white">
                         <option value="">{t("book.form.experience.ph")}</option>
                         <option value="corporate">{t("book.form.experience.corporate")}</option>
                         <option value="influencer">{t("book.form.experience.influencer")}</option>
@@ -103,19 +103,19 @@ export default function BookingInquiry() {
 
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.dates")}</label>
-                        <input name="dates" type="date" min={today} className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white [color-scheme:light] dark:[color-scheme:dark]" />
+                        <label htmlFor="bk-dates" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.dates")}</label>
+                        <input id="bk-dates" name="dates" type="date" min={today} className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white [color-scheme:light] dark:[color-scheme:dark]" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.group")}</label>
-                        <input name="groupSize" type="text" className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" placeholder={t("book.form.group.ph")} />
+                        <label htmlFor="bk-group" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.group")}</label>
+                        <input id="bk-group" name="groupSize" type="text" className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400" placeholder={t("book.form.group.ph")} />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.message")}</label>
+                      <label htmlFor="bk-message" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-2">{t("book.form.message")}</label>
                       <textarea
-                        name="message"
+                        id="bk-message" name="message"
                         rows={5}
                         className="w-full rounded-lg border border-gray-200 dark:border-gray-600 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent resize-none bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
                         placeholder={t("book.form.message.ph")}

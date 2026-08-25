@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocale } from "../../hooks/useLocale";
 
 // siteUrl is the canonical production origin. Swap this single constant (and the
 // matching values in index.html, public/robots.txt, public/sitemap.xml) if a
@@ -6,13 +7,13 @@ import { Helmet } from "react-helmet-async";
 const defaults = {
   siteName: "Mount Echo",
   siteUrl: "https://mount-echo.vercel.app",
-  description: "Curated week-long experiences in nature. Corporate retreats, creative residencies, wellness journeys, and coding intensives.",
   image: "https://mount-echo.vercel.app/og.png",
 };
 
 export default function SEO({ title, description, path = "", ogType = "website" }) {
+  const { t } = useLocale();
   const fullTitle = title ? `${title} | ${defaults.siteName}` : `${defaults.siteName} | Curated Week-Long Experiences in Nature`;
-  const desc = description || defaults.description;
+  const desc = description || t("seo.default.desc");
   const url = `${defaults.siteUrl}${path}`;
 
   return (

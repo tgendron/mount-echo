@@ -116,10 +116,9 @@ export default {
   "book.form.experience.corporate": "Corporate Offsite",
   "book.form.experience.influencer": "Influencer Filming",
   "book.form.experience.fasting": "Fasting Retreat",
-  "book.form.experience.coding": "Coding Bootcamp",
+  "book.form.experience.coding": "Coding & Claude Camp",
   "book.form.experience.custom": "Custom / Other",
   "book.form.dates": "Preferred Dates",
-  "book.form.dates.ph": "e.g., June 2-6, 2026",
   "book.form.group": "Group Size",
   "book.form.group.ph": "e.g., 4-8 people",
   "book.form.message": "Tell Us More",
@@ -191,15 +190,14 @@ export default {
   "notfound.body": "The page you\u2019re looking for doesn\u2019t exist or has been moved.",
   "notfound.btn": "Return Home",
 
-  // Claude Camp
-  "exp.claude.name": "Claude Camp",
-  "exp.claude.tagline": "MVP to traction in 5 days.",
-  "exp.claude.heroHeadline": "From Idea\nto Traction.",
-  "exp.claude.heroSub": "A week-long AI-powered founder intensive at Mount Echo. Build your product, sharpen your GTM, and ship — with Claude as your co-pilot.",
-  "exp.claude.introTitle": "What is Claude Camp?",
-  "exp.claude.introBody": "Claude Camp is a 5-day intensive for founders and builders who are ready to move fast. Bring your MVP, your questions, and your ambition. Leave with traction, a sharpened GTM strategy, and the AI workflows that will define how you build from here.",
-  "exp.claude.cta": "Apply for Claude Camp",
-  "exp.claude.pricing.headline": "Your Traction Investment",
+  "exp.local.newTab": "opens in a new tab",
+
+  // SEO descriptions
+  "seo.default.desc": "Curated week-long experiences in nature near Knowlton, Quebec. Corporate retreats, creative residencies, wellness journeys, and coding intensives.",
+  "seo.property.desc": "Four private bedrooms across two floors, shared common spaces, and the wild beauty of Quebec's Eastern Townships. Explore Mount Echo.",
+  "seo.book.desc": "Plan your week at Mount Echo. Tell us about your group and goals, and we'll design a tailored experience.",
+  "seo.about.desc": "The story behind Mount Echo. A property built on the belief that the right environment can transform how teams work and individuals reconnect.",
+  "seo.journal.desc": "Insights on retreat planning, team offsites, wellness, and the Mount Echo experience.",
 
   // Footer
   "footer.desc": "A curated hospitality property for transformative week-long experiences. Corporate retreats, creative residencies, wellness journeys, and more.",
