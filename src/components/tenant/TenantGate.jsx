@@ -19,7 +19,8 @@ export default function TenantGate({ onAuth }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const expected = CODES[unit];
+    // trim() guards against a stray newline/space in the stored env value
+    const expected = (CODES[unit] || "").trim();
     if (expected && code === expected) {
       sessionStorage.setItem("tenant_unit", unit);
       onAuth(unit);

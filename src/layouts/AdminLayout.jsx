@@ -19,7 +19,8 @@ function AdminAuth({ onAuth }) {
     // MVP: simple password gate — the password lives in VITE_ADMIN_PASSWORD
     // (still visible in the bundle; real auth is on the backlog). With the
     // env var unset, the gate denies everyone rather than falling open.
-    if (import.meta.env.VITE_ADMIN_PASSWORD && password === import.meta.env.VITE_ADMIN_PASSWORD) {
+    const expected = (import.meta.env.VITE_ADMIN_PASSWORD || "").trim(); // trim() guards a stray newline in the env value
+    if (expected && password === expected) {
       sessionStorage.setItem("admin_auth", "true");
       onAuth();
     } else {
