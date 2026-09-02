@@ -50,6 +50,7 @@ export default function Footer() {
                 ["/journal",  t("nav.journal")],
                 ["/about",    t("nav.about")],
                 ["/book",     t("nav.book")],
+                ["/tenant",   t("tenant.title")],
               ].map(([path, label]) => (
                 <li key={path}>
                   <Link to={path} className="text-[13px] text-white/40 hover:text-white transition-colors">

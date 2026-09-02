@@ -80,6 +80,14 @@ const backlogItems = [
   {
     priority: "medium",
     category: "Backend",
+    title: "Tenant requests \u2192 admin view + real storage",
+    description: "Tenant maintenance requests currently save to the tenant's own browser (localStorage) and are not visible to management. Wire them into the admin Concierge/Inquiries views and persist them server-side (Supabase, alongside the existing backend item) so requests survive device changes and can be assigned a status by staff. Also set the per-unit codes for Preview deployments in Vercel (VITE_TENANT_CODE_10 / _12) \u2014 production is set.",
+    icon: Database,
+    effort: "1-2 days (with Supabase)",
+  },
+  {
+    priority: "medium",
+    category: "Backend",
     title: "Real Availability Calendar",
     description: "Connect the availability calendar to actual booking data. Support date range selection, conflict detection, and hold/tentative states. Consider integrating with Cal.com or building on Supabase.",
     icon: Calendar,
@@ -199,6 +207,7 @@ export default function Backlog() {
               "Nearby-experiences by retreat type (region-matched)",
               "Located in Knowlton / Eastern Townships, Québec",
               "Backlog moved behind the admin gate",
+              "Tenant portal for units 10 & 12 (Notion-style, EN/FR)",
               "Localized SEO titles + descriptions (EN/FR)",
               "Accessible form labels on the booking form",
               "Dependencies current \u2014 0 security advisories",

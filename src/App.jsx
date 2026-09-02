@@ -17,6 +17,7 @@ const Availability = lazy(() => import("./pages/admin/Availability"));
 const Inquiries = lazy(() => import("./pages/admin/Inquiries"));
 const Concierge = lazy(() => import("./pages/admin/Concierge"));
 const Backlog = lazy(() => import("./pages/Backlog"));
+const TenantPortal = lazy(() => import("./pages/tenant/TenantPortal"));
 
 export default function App() {
   return (
@@ -36,6 +37,9 @@ export default function App() {
             <Route path="journal/:slug" element={<JournalPost />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+
+          {/* Tenant portal — long-term renters of units 10 and 12 */}
+          <Route path="tenant" element={<TenantPortal />} />
 
           {/* Admin */}
           <Route path="admin" element={<AdminLayout />}>
